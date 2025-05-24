@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing Plans | Sentry Payments</title>
-    <meta name="description" content="Explore Sentry's flexible pricing plans designed for businesses of all sizes. Choose the best fit for your Pi Network payment and review needs.">
+    <title>Sentry System Status | Real-time Service Monitoring</title>
+    <meta name="description" content="View the real-time system status for Sentry services, including API, Pi Payments Gateway, and more. Check for ongoing incidents or view past incident history.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -12,6 +12,7 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/status.css"> <!-- Specific styles for status page -->
 
     <!-- Google Fonts - Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,114 +88,119 @@
     </header>
 
     <main>
-        <!-- Pricing Hero Section -->
-        <section class="page-hero">
+        <!-- Status Hero Section -->
+        <section class="page-hero status-hero status-operational-bg"> <!-- Class changes based on overall status -->
             <div class="container">
                 <div class="page-hero-content">
-                    <h1 class="page-title">Simple, Transparent Pricing</h1>
-                    <p class="page-subtitle">Choose the Sentry plan that scales with your business. No hidden fees, just clear value for integrating Pi Network solutions.</p>
+                    <h1 class="page-title">Sentry System Status</h1>
+                    <!-- Overall Status Message - This would be dynamically updated -->
+                    <p class="overall-status-message status-operational-text">All Systems Operational</p> 
+                    <p class="last-updated">Last updated: October 26, 2025, 10:00 UTC</p>
                 </div>
             </div>
         </section>
 
-        <!-- Pricing Table Section -->
-        <section class="pricing-table-section">
+        <!-- Services Status Section -->
+        <section class="services-status-section">
             <div class="container">
-                <div class="pricing-grid">
-                    <!-- Pioneer Plan -->
-                    <div class="pricing-card">
-                        <div class="pricing-card-header">
-                            <h2 class="plan-name">Pioneer</h2>
-                            <p class="plan-price">Free</p>
-                            <p class="plan-description">For individuals and startups exploring Pi Network capabilities.</p>
-                        </div>
-                        <ul class="plan-features">
-                            <li><span class="feature-icon">✓</span>Pi Payment Gateway</li>
-                            <li><span class="feature-icon">✓</span>Blockchain Review Verifier (up to 100 reviews/month)</li>
-                            <li><span class="feature-icon">✓</span>Basic Analytics Dashboard</li>
-                            <li><span class="feature-icon">✓</span>500 API Calls/Month</li>
-                            <li><span class="feature-icon">✓</span>Community Support</li>
-                            <li><span class="feature-icon"></span>2.0% + 0.05 Pi per transaction</li>
-                        </ul>
-                        <a href="signup.html?plan=pioneer" class="btn btn-primary btn-full">Get Started</a>
+                <h2 class="section-title-center">Current Service Status</h2>
+                <div class="services-status-list">
+                    <div class="service-item">
+                        <span class="service-name">Sentry API</span>
+                        <span class="service-status status-operational">Operational</span>
                     </div>
-
-                    <!-- Voyager Plan -->
-                    <div class="pricing-card featured">
-                        <div class="pricing-card-header">
-                            <span class="featured-badge">Most Popular</span>
-                            <h2 class="plan-name">Voyager</h2>
-                            <p class="plan-price">100 Pi / month</p>
-                            <p class="plan-description">For growing businesses looking to scale with more features and support.</p>
-                        </div>
-                        <ul class="plan-features">
-                            <li><span class="feature-icon">✓</span>All Pioneer features, plus:</li>
-                            <li><span class="feature-icon">✓</span>Unlimited Blockchain Reviews</li>
-                            <li><span class="feature-icon">✓</span>Advanced Analytics & Reporting</li>
-                            <li><span class="feature-icon">✓</span>5,000 API Calls/Month</li>
-                            <li><span class="feature-icon">✓</span>Email & Chat Support</li>
-                            <li><span class="feature-icon"></span>1.5% + 0.02 Pi per transaction</li>
-                        </ul>
-                        <a href="signup.html?plan=voyager" class="btn btn-primary btn-full">Choose Voyager</a>
+                    <div class="service-item">
+                        <span class="service-name">Pi Payments Gateway</span>
+                        <span class="service-status status-operational">Operational</span>
                     </div>
-
-                    <!-- Enterprise Plan -->
-                    <div class="pricing-card">
-                        <div class="pricing-card-header">
-                            <h2 class="plan-name">Enterprise</h2>
-                            <p class="plan-price">Custom</p>
-                            <p class="plan-description">For large-scale operations needing tailored solutions and dedicated support.</p>
-                        </div>
-                        <ul class="plan-features">
-                            <li><span class="feature-icon">✓</span>All Voyager features, plus:</li>
-                            <li><span class="feature-icon">✓</span>Volume-Based Transaction Rates</li>
-                            <li><span class="feature-icon">✓</span>Custom API Rate Limits</li>
-                            <li><span class="feature-icon">✓</span>Dedicated Account Manager</li>
-                            <li><span class="feature-icon">✓</span>Premium SLA & Support</li>
-                            <li><span class="feature-icon">✓</span>Bespoke Integrations</li>
-                        </ul>
-                        <a href="contact-sales.html" class="btn btn-outline btn-full">Contact Sales</a>
+                    <div class="service-item">
+                        <span class="service-name">Review Verification Service</span>
+                        <span class="service-status status-degraded">Degraded Performance</span>
                     </div>
+                    <div class="service-item">
+                        <span class="service-name">Merchant Dashboard</span>
+                        <span class="service-status status-operational">Operational</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-name">Sentry Website</span>
+                        <span class="service-status status-operational">Operational</span>
+                    </div>
+                     <div class="service-item">
+                        <span class="service-name">Analytics Data Processing</span>
+                        <span class="service-status status-maintenance">Under Maintenance</span>
+                    </div>
+                </div>
+                 <div class="status-legend">
+                    <h3 class="legend-title">Status Key:</h3>
+                    <ul class="legend-list">
+                        <li><span class="legend-color status-operational-bg-dot"></span> Operational</li>
+                        <li><span class="legend-color status-degraded-bg-dot"></span> Degraded Performance</li>
+                        <li><span class="legend-color status-partial-outage-bg-dot"></span> Partial Outage</li>
+                        <li><span class="legend-color status-major-outage-bg-dot"></span> Major Outage</li>
+                        <li><span class="legend-color status-maintenance-bg-dot"></span> Under Maintenance</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ Section -->
-        <section class="faq-section">
+        <!-- Incident History Section -->
+        <section class="incident-history-section">
             <div class="container">
-                <h2 class="section-title-center">Frequently Asked Questions</h2>
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <h3 class="faq-question">Are there any setup fees?</h3>
-                        <p class="faq-answer">No, there are no setup fees for any of our plans. You can get started with the Pioneer plan for free.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3 class="faq-question">Can I change my plan later?</h3>
-                        <p class="faq-answer">Yes, you can upgrade or downgrade your plan at any time directly from your Sentry dashboard to fit your changing business needs.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3 class="faq-question">What payment methods do you accept for subscriptions?</h3>
-                        <p class="faq-answer">Currently, all Sentry subscriptions are payable in Pi. Transaction fees are also settled in Pi.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3 class="faq-question">Is there a free trial for paid plans?</h3>
-                        <p class="faq-answer">We offer the Pioneer plan for free, which includes core features to get you started. For specific needs beyond that, please explore our Voyager plan or contact sales for Enterprise solutions.</p>
-                    </div>
+                <h2 class="section-title-center">Incident History</h2>
+                <div class="incident-list">
+                    <article class="incident-item">
+                        <header class="incident-header">
+                            <h3 class="incident-title">Minor Delay in Review Verification</h3>
+                            <p class="incident-date">October 25, 2025</p>
+                            <span class="incident-status status-resolved">Resolved</span>
+                        </header>
+                        <div class="incident-details">
+                            <p><strong>Update:</strong> This issue has been resolved, and review verification is operating normally. (Oct 25, 14:30 UTC)</p>
+                            <p><strong>Monitoring:</strong> We identified a temporary processing delay in our Review Verification Service. New reviews were queued and processed with a slight delay. All systems remained operational. (Oct 25, 14:00 UTC)</p>
+                            <p><strong>Identified:</strong> We are investigating a minor delay in the processing of new reviews. (Oct 25, 13:45 UTC)</p>
+                        </div>
+                    </article>
+
+                    <article class="incident-item">
+                        <header class="incident-header">
+                            <h3 class="incident-title">Scheduled Maintenance for Analytics Database</h3>
+                            <p class="incident-date">October 20, 2025</p>
+                            <span class="incident-status status-completed">Completed</span>
+                        </header>
+                        <div class="incident-details">
+                            <p><strong>Completed:</strong> The scheduled maintenance for our analytics database is now complete. All analytics services are fully operational. (Oct 20, 04:00 UTC)</p>
+                            <p><strong>In Progress:</strong> Scheduled maintenance is currently underway. Analytics data may be temporarily unavailable or delayed. (Oct 20, 01:00 UTC)</p>
+                        </div>
+                    </article>
+                     <article class="incident-item">
+                        <header class="incident-header">
+                            <h3 class="incident-title">Brief API Interruption</h3>
+                            <p class="incident-date">September 15, 2025</p>
+                            <span class="incident-status status-resolved">Resolved</span>
+                        </header>
+                        <div class="incident-details">
+                            <p><strong>Resolved:</strong> The brief interruption to API services has been fully resolved. All API endpoints are functioning normally. We apologize for any inconvenience. (Sep 15, 08:15 UTC)</p>
+                            <p><strong>Investigating:</strong> We are currently investigating a brief interruption affecting some API requests. (Sep 15, 08:05 UTC)</p>
+                        </div>
+                    </article>
                 </div>
-            </div>
-        </section>
-        
-        <!-- Call to Action for Custom Needs -->
-        <section class="custom-solution-cta">
-            <div class="container">
-                <div class="cta-content-box">
-                    <h2 class="cta-title-medium">Need a Custom Solution?</h2>
-                    <p class="cta-text-medium">If your business has unique requirements not covered by our standard plans, our team is ready to design a custom Enterprise solution for you.</p>
-                    <a href="contact-sales.html" class="btn btn-primary">Talk to Our Experts</a>
+                <div class="view-more-history">
+                     <a href="#" class="btn btn-outline">View Full Incident History</a> <!-- Link to a more detailed history page or archive -->
                 </div>
             </div>
         </section>
 
+        <!-- Subscribe to Updates Section -->
+        <section class="subscribe-updates-section">
+            <div class="container">
+                <h2 class="section-title-center">Stay Informed</h2>
+                <p class="section-subtitle-center">Subscribe to receive real-time email notifications about Sentry system status updates and scheduled maintenance.</p>
+                <form class="subscribe-form">
+                    <input type="email" name="email" placeholder="Enter your email address" required class="subscribe-input">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
