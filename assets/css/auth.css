@@ -362,6 +362,27 @@ Sentry Payment Platform - Authentication Stylesheet
   margin-top: 1.6rem;
 }
 
+/* Auth Notification Styling */
+.auth-notification {
+  padding: 1.2rem 1.6rem;
+  border-radius: var(--radius-sm);
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem; /* Space before the form elements */
+  text-align: center;
+  display: none; /* Hidden by default, shown by JS */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Assuming general .notification-success, .notification-error are in styles.css for colors/icons */
+/* Example:
+.notification-success { background-color: #D4EDDA; color: #155724; border: 1px solid #C3E6CB; }
+.notification-error { background-color: #F8D7DA; color: #721C24; border: 1px solid #F5C6CB; }
+.notification-info { background-color: #D1ECF1; color: #0C5460; border: 1px solid #BEE5EB; } 
+*/
+
+
 /* ===== RESPONSIVE STYLES ===== */
 @media screen and (max-width: 576px) {
   .auth-card {

@@ -125,6 +125,23 @@ p {
   color: var(--dark-gray);
 }
 
+.section-title-center { /* Added for convenience */
+  text-align: center;
+  font-size: 3.2rem; /* Default h3 size */
+  color: var(--blue-charcoal);
+  margin-bottom: 4rem; /* Default, can be overridden */
+}
+
+.section-subtitle-center { /* Added for convenience */
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--dark-gray);
+  margin-bottom: 4rem; /* Default, can be overridden */
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ===== BUTTONS ===== */
 .btn {
   display: inline-flex;
@@ -178,6 +195,86 @@ p {
 .btn-text:hover {
   color: var(--royal-blue);
 }
+
+.btn-small { /* Helper class for smaller buttons */
+    padding: 0.8rem 1.6rem !important; /* Use !important if necessary to override default .btn padding */
+    font-size: 1.4rem !important;
+}
+
+/* ===== NOTIFICATION STYLES ===== */
+.notification {
+  position: fixed;
+  bottom: 2rem; /* Default position, can be overridden by auth-notification */
+  right: 2rem;  /* Default position */
+  padding: 1.5rem 2.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  font-size: 1.5rem;
+  font-weight: 500;
+  z-index: 2000;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, bottom 0.3s ease, right 0.3s ease; /* Added bottom/right transition */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 400px; /* Max width for notifications */
+}
+
+.notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.notification::before { /* For icon */
+  content: '';
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.notification-success {
+  background-color: #E6FFFA; /* Light Green */
+  color: #257953; /* Dark Green */
+  border: 1px solid #B2F5EA; /* Mid Green */
+}
+.notification-success::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23257953'%3E%3Cpath fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.notification-error {
+  background-color: #FFF5F5; /* Light Red */
+  color: #C53030; /* Dark Red */
+  border: 1px solid #FED7D7; /* Mid Red */
+}
+.notification-error::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23C53030'%3E%3Cpath fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z' clip-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.notification-info {
+  background-color: #EBF8FF; /* Light Blue */
+  color: #2C5282; /* Dark Blue */
+  border: 1px solid #BEE3F8; /* Mid Blue */
+}
+.notification-info::before {
+   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%232C5282'%3E%3Cpath fill-rule='evenodd' d='M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z' clip-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* Specific for auth notifications if they need different positioning */
+.auth-notification {
+    position: static; /* Override fixed positioning for inline display */
+    margin-top: 0; /* Reset fixed positioning margins */
+    margin-bottom: 1.5rem; /* Space before the form elements */
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    transform: translateY(0); /* Reset transform */
+}
+
 
 /* ===== HEADER & NAVIGATION ===== */
 .header {
@@ -299,9 +396,32 @@ p {
   transition: var(--transition);
 }
 
-/* ===== HERO SECTION ===== */
-.hero {
-  padding-top: 16rem;
+/* ===== GENERIC PAGE HERO (can be customized by page-specific CSS) ===== */
+.page-hero {
+  padding: 6rem 0; /* Standard padding */
+  background-color: var(--light-gray); /* Default background */
+  text-align: center;
+  margin-top: 8rem; /* To account for fixed header height. Adjust if header height changes. */
+}
+
+.page-hero .page-title {
+  font-size: 4.8rem; /* Default page title size (can adjust per page) */
+  color: var(--blue-charcoal);
+  margin-bottom: 1.5rem;
+}
+
+.page-hero .page-subtitle {
+  font-size: 2rem;
+  color: var(--dark-gray);
+  max-width: 750px; /* Control subtitle width */
+  margin: 0 auto 2.5rem auto; /* Centering and bottom margin */
+}
+/* Individual pages can override .page-hero background-color, text colors etc. */
+
+
+/* ===== HERO SECTION (Homepage specific) ===== */
+.hero { /* This is for the main homepage hero, distinguish from .page-hero */
+  padding-top: 16rem; /* More padding for homepage hero */
   padding-bottom: 8rem;
   background: linear-gradient(135deg, #f5f7ff 0%, #e8edff 100%);
 }

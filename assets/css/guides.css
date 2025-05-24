@@ -1,0 +1,105 @@
+/* Styles for guides.html */
+
+/* Page Hero - specific styling for guides if needed */
+.guides-hero { /* Use if different from default .page-hero */
+    background-color: var(--light-gray); /* Consistent with other page heroes */
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.guides-hero .page-title {
+    color: var(--blue-charcoal);
+}
+
+.guides-hero .page-subtitle {
+    color: var(--dark-gray);
+    font-size: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Guides Listing Section */
+.guides-listing-section {
+    padding: 6rem 0;
+}
+
+.guide-category {
+    margin-bottom: 5rem;
+}
+
+.guide-category:last-child {
+    margin-bottom: 0;
+}
+
+.category-title { /* Styling for category titles like "Getting Started" */
+    font-size: 2.8rem; /* h3 size or slightly larger than guide titles */
+    color: var(--blue-charcoal);
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--cornflower-blue);
+    text-align: left; /* Or center if preferred */
+}
+
+.guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.guide-card {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guide-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.guide-icon {
+    width: 48px; /* Standardized icon size */
+    height: 48px;
+    margin-bottom: 1.5rem;
+    /* The actual icon SVGs have fill, so no need to set color here */
+}
+
+.guide-title {
+    font-size: 2rem; /* h5 size */
+    color: var(--blue-charcoal);
+    margin-bottom: 1rem;
+}
+
+.guide-title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.guide-title a:hover {
+    color: var(--royal-blue);
+}
+
+.guide-description {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex-grow: 1; /* Ensures card content below description aligns */
+}
+
+.guide-card .btn-secondary.btn-small { /* Specificity for small button in card */
+    padding: 0.8rem 1.6rem; /* Smaller padding for "small" button */
+    font-size: 1.4rem; /* Smaller font for "small" button */
+    margin-top: auto; /* Align button to bottom of card */
+    align-self: flex-start; /* Align to the left */
+}
+
+/* CTA section styling is likely global from styles.css */
+.cta {
+    /* Styles are usually global */
+}

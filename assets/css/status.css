@@ -1,0 +1,277 @@
+/* Styles for status.html */
+
+/* Status Hero Section - dynamic background based on overall status */
+.status-hero {
+    padding: 5rem 0; /* Slightly less padding than default page-hero */
+    text-align: center;
+    transition: background-color 0.5s ease; /* Smooth transition if status changes */
+}
+
+.status-hero .page-title {
+    margin-bottom: 1rem;
+}
+
+.overall-status-message {
+    font-size: 2.8rem; /* Prominent status message */
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.last-updated {
+    font-size: 1.4rem;
+}
+
+/* Background and Text Colors for Overall Status */
+.status-operational-bg { background-color: #E6FFFA; /* Light Green */ }
+.status-operational-text { color: #257953; /* Dark Green */ }
+.status-hero.status-operational-bg .page-title { color: #2F795E; }
+.status-hero.status-operational-bg .last-updated { color: #2F795E; }
+
+
+.status-degraded-bg { background-color: #FFFBE6; /* Light Yellow */ }
+.status-degraded-text { color: #B47409; /* Dark Yellow/Orange */ }
+.status-hero.status-degraded-bg .page-title { color: #8a5a00; }
+.status-hero.status-degraded-bg .last-updated { color: #8a5a00; }
+
+
+.status-outage-bg { background-color: #FFF5F5; /* Light Red */ }
+.status-outage-text { color: #C53030; /* Dark Red */ }
+.status-hero.status-outage-bg .page-title { color: #A52A2A; }
+.status-hero.status-outage-bg .last-updated { color: #A52A2A; }
+
+.status-maintenance-bg { background-color: #EBF8FF; /* Light Blue */ }
+.status-maintenance-text { color: #2C5282; /* Dark Blue */ }
+.status-hero.status-maintenance-bg .page-title { color: #23426A; }
+.status-hero.status-maintenance-bg .last-updated { color: #23426A; }
+
+
+/* Services Status Section */
+.services-status-section {
+    padding: 6rem 0;
+}
+
+.section-title-center { /* Ensure this is globally available or define here */
+    text-align: center;
+    font-size: 3.2rem;
+    color: var(--blue-charcoal);
+    margin-bottom: 4rem;
+}
+
+.services-status-list {
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    overflow: hidden; /* To clip borders of items */
+}
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2.5rem;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.service-item:last-child {
+    border-bottom: none;
+}
+
+.service-name {
+    font-size: 1.8rem;
+    color: var(--blue-charcoal);
+    font-weight: 500;
+}
+
+.service-status {
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--radius-sm);
+    text-transform: capitalize;
+}
+
+/* Status Indicator Colors */
+.status-operational { background-color: #C6F6D5; color: #22543D; } /* Green */
+.status-degraded { background-color: #FEEBC8; color: #9C4221; } /* Yellow/Orange */
+.status-partial-outage { background-color: #FED7D7; color: #9B2C2C; } /* Red */
+.status-major-outage { background-color: #FC8181; color: #742A2A; } /* Darker Red */
+.status-maintenance { background-color: #E0E7FF; color: #4C51BF; } /* Indigo/Blue */
+.status-resolved, .status-completed { background-color: #E6FFFA; color: #257953; } /* Light Green for resolved */
+
+
+/* Status Legend */
+.status-legend {
+    max-width: 800px;
+    margin: 3rem auto 0;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+.legend-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--blue-charcoal);
+}
+.legend-list {
+    list-style: none;
+    padding: 0;
+}
+.legend-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+}
+.legend-color {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.status-operational-bg-dot { background-color: #C6F6D5; }
+.status-degraded-bg-dot { background-color: #FEEBC8; }
+.status-partial-outage-bg-dot { background-color: #FED7D7; }
+.status-major-outage-bg-dot { background-color: #FC8181; }
+.status-maintenance-bg-dot { background-color: #E0E7FF; }
+
+
+/* Incident History Section */
+.incident-history-section {
+    padding: 6rem 0;
+    background-color: var(--light-gray);
+}
+
+.incident-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.incident-item {
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    margin-bottom: 3rem;
+    padding: 2.5rem;
+}
+
+.incident-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--light-gray);
+    flex-wrap: wrap; /* Allow wrapping for status */
+}
+
+.incident-title {
+    font-size: 2rem; /* h5 */
+    color: var(--blue-charcoal);
+    margin-bottom: 0.5rem; /* Adjust for wrapping */
+}
+
+.incident-date {
+    font-size: 1.4rem;
+    color: var(--mid-gray);
+    margin-bottom: 0.5rem; /* Adjust for wrapping */
+    flex-shrink: 0; /* Prevent date from shrinking too much */
+    margin-left: 1rem; /* Space from title if on same line */
+}
+
+.incident-status { /* Reuses .service-status styles */
+    font-size: 1.4rem; /* Slightly smaller for history */
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    text-transform: capitalize;
+    align-self: flex-start; /* Align with top of title if possible */
+}
+
+
+.incident-details p {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.incident-details p:last-child {
+    margin-bottom: 0;
+}
+.incident-details strong { /* For Update:, Monitoring:, Identified: */
+    font-weight: 600;
+    color: var(--blue-charcoal);
+}
+
+.view-more-history {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Subscribe to Updates Section */
+.subscribe-updates-section {
+    padding: 6rem 0;
+    background-color: var(--white); /* Or a different color like var(--cornflower-blue) with white text */
+}
+
+.section-subtitle-center {
+    max-width: 600px; /* Ensure it's not too wide */
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 550px;
+    margin: 0 auto;
+    gap: 1.5rem;
+}
+
+.subscribe-input {
+    flex-grow: 1;
+    padding: 1.2rem 1.8rem;
+    border: 1px solid var(--mid-gray);
+    border-radius: var(--radius-md);
+    font-size: 1.6rem;
+}
+.subscribe-input:focus {
+    outline: none;
+    border-color: var(--royal-blue);
+    box-shadow: 0 0 0 3px rgba(58, 85, 242, 0.2);
+}
+
+.subscribe-form .btn-primary {
+    padding: 1.2rem 2.4rem; /* Standard button padding */
+    white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+@media screen and (max-width: 480px) {
+    .service-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+    .subscribe-form {
+        flex-direction: column;
+    }
+    .subscribe-input, .subscribe-form .btn-primary {
+        width: 100%;
+    }
+    .incident-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .incident-date {
+        margin-left: 0;
+    }
+    .incident-status {
+        margin-top: 0.5rem;
+    }
+}

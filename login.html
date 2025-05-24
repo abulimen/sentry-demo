@@ -29,13 +29,13 @@
 
         <div class="auth-card">
             <div class="auth-header">
-                <h1>Log in to your account</h1>
+                <h1>Log In to Sentry</h1>
                 <p>Enter your credentials to access your dashboard</p>
             </div>
 
             <form class="auth-form" id="login-form">
                 <div class="form-group">
-                    <label for="email">Email</label>
+                    <label for="email">Email Address</label>
                     <input type="email" id="email" name="email" placeholder="you@example.com" required>
                 </div>
 
@@ -84,69 +84,7 @@
     </div>
 
     <!-- JavaScript Files -->
-    <script src="assets/js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Password visibility toggle
-            const passwordToggle = document.querySelector('.password-toggle');
-            const passwordInput = document.querySelector('#password');
-
-            passwordToggle.addEventListener('click', function() {
-                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-                passwordInput.setAttribute('type', type);
-                this.classList.toggle('visible');
-            });
-
-            // Form submission
-            const loginForm = document.getElementById('login-form');
-
-            loginForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-
-                const email = document.getElementById('email').value;
-                const password = document.getElementById('password').value;
-
-                const submitButton = this.querySelector('button[type="submit"]');
-                const originalText = submitButton.textContent;
-
-                // Show loading state
-                submitButton.innerHTML = '<span class="loading-spinner"></span> Logging in...';
-                submitButton.disabled = true;
-
-                // Simulate API call
-                setTimeout(() => {
-                    // For demo purposes, redirect to dashboard
-                    window.location.href = 'dashboard.html';
-
-                    // In case redirection fails, reset the button
-                    submitButton.innerHTML = originalText;
-                    submitButton.disabled = false;
-                }, 1500);
-            });
-
-            // Social auth buttons
-            const socialButtons = document.querySelectorAll('.btn-social');
-
-            socialButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const originalText = this.innerHTML;
-
-                    // Show loading state
-                    this.innerHTML = '<span class="loading-spinner"></span> Connecting...';
-                    this.disabled = true;
-
-                    // Simulate API call
-                    setTimeout(() => {
-                        // For demo purposes, redirect to dashboard
-                        window.location.href = 'dashboard.html';
-
-                        // In case redirection fails, reset the button
-                        this.innerHTML = originalText;
-                        this.disabled = false;
-                    }, 1500);
-                });
-            });
-        });
-    </script>
+    <script src="assets/js/main.js"></script> <!-- General site scripts -->
+    <script src="assets/js/auth.js"></script> <!-- Authentication specific scripts -->
 </body>
 </html>

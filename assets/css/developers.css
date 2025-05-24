@@ -1,0 +1,333 @@
+/* Styles for developers.html */
+
+/* Page Hero - specific styling for developers page */
+.developers-hero { /* Different from default .page-hero */
+    background: linear-gradient(135deg, var(--blue-charcoal) 0%, var(--royal-blue) 100%);
+    color: var(--white);
+    padding: 8rem 0; /* More padding for a prominent hero */
+    text-align: left; /* Align text to the left for dev pages */
+}
+
+.developers-hero .container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.developers-hero .page-hero-content {
+    flex: 1.2; /* Give more space to text */
+}
+
+.developers-hero .page-title {
+    color: var(--white);
+    font-size: 4.8rem; /* Slightly smaller than main hero if needed */
+}
+
+.developers-hero .page-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.developers-hero .hero-buttons .btn-primary {
+    background-color: var(--cornflower-blue);
+    color: var(--blue-charcoal);
+    font-weight: 700;
+}
+.developers-hero .hero-buttons .btn-primary:hover {
+    background-color: var(--white);
+}
+.developers-hero .hero-buttons .btn-outline {
+    border-color: var(--cornflower-blue);
+    color: var(--white);
+}
+.developers-hero .hero-buttons .btn-outline:hover {
+    background-color: var(--cornflower-blue);
+    color: var(--blue-charcoal);
+}
+
+
+.hero-image-dev {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image-dev img {
+    max-width: 100%;
+    border-radius: var(--radius-md);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+
+/* Getting Started Section */
+.getting-started-dev {
+    padding: 6rem 0;
+    background-color: var(--light-gray);
+}
+
+/* .section-title-center is now global in styles.css */
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.step-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.step-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--royal-blue);
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--royal-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.step-title {
+    font-size: 2rem; /* h5 */
+    color: var(--blue-charcoal);
+    margin-bottom: 1rem;
+}
+
+.step-description {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    margin-bottom: 1.5rem;
+    min-height: 60px; /* Give some consistent height */
+}
+
+.step-link {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--royal-blue);
+    text-decoration: none;
+}
+.step-link:hover {
+    text-decoration: underline;
+}
+
+/* API Overview Section */
+.api-overview-section {
+    padding: 6rem 0;
+}
+
+/* .section-subtitle-center is now global in styles.css */
+
+.api-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+}
+
+.api-feature-card {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--cornflower-blue); /* Accent */
+}
+
+.api-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1.5rem;
+}
+
+.api-title {
+    font-size: 2.2rem; /* h4-ish */
+    color: var(--blue-charcoal);
+    margin-bottom: 1rem;
+}
+
+.api-description {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.btn-text-icon { /* For links like "Explore API ->" */
+    font-weight: 600;
+    color: var(--royal-blue);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+.btn-text-icon .arrow-right {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: 0.5rem;
+    background-image: url('../images/arrow-right-blue.svg'); /* Needs this SVG */
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: margin-left 0.3s ease;
+}
+.btn-text-icon:hover .arrow-right {
+    margin-left: 0.8rem;
+}
+
+
+/* Developer Tools Section */
+.developer-tools-section {
+    padding: 6rem 0;
+    background-color: var(--light-gray);
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+}
+
+.tool-card {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.tool-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1.5rem;
+}
+
+.tool-name {
+    font-size: 2rem; /* h5 */
+    color: var(--blue-charcoal);
+    margin-bottom: 1rem;
+}
+
+.tool-description {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    margin-bottom: 1.5rem;
+}
+
+.tool-link {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--royal-blue);
+    text-decoration: none;
+}
+.tool-link:hover {
+    text-decoration: underline;
+}
+
+/* Code Snippet Section */
+.code-snippet-section {
+    padding: 6rem 0;
+}
+/* .section-title-center and .section-subtitle-center for this section title/subtitle are now global */
+.code-block-container {
+    background-color: var(--blue-charcoal); /* Dark background for code */
+    color: var(--light-gray);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    overflow-x: auto; /* Scroll for long code lines */
+    box-shadow: var(--shadow-inner, 0 2px 4px rgba(0,0,0,0.2) inset); /* Inner shadow */
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+}
+.code-block-container pre {
+    margin: 0; /* Reset pre margin */
+}
+.code-block-container code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    white-space: pre; /* Preserve whitespace */
+}
+.code-note {
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--mid-gray);
+}
+
+
+/* Developer Resources Section */
+.developer-resources-section {
+    padding: 6rem 0;
+    background-color: var(--light-gray);
+}
+
+.resource-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.resource-link-card {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: var(--blue-charcoal);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.resource-link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    color: var(--royal-blue);
+}
+
+.resource-link-card img { /* Icons within these cards */
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1.5rem;
+}
+
+.resource-link-card h4 {
+    font-size: 1.8rem; /* h6 */
+    color: inherit; /* Inherits color from parent a for hover effect */
+    margin-bottom: 0.8rem;
+}
+
+.resource-link-card p {
+    font-size: 1.4rem;
+    color: var(--dark-gray);
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+
+/* CTA section styling is likely global from styles.css */
+.cta {
+    /* Styles are usually global */
+}
+
+/* Responsive adjustments for developer page */
+@media screen and (max-width: 768px) {
+    .developers-hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .developers-hero .page-hero-content {
+        order: 2;
+    }
+    .hero-image-dev {
+        order: 1;
+        margin-bottom: 3rem;
+        max-width: 350px; /* Reduce hero image on mobile */
+    }
+}

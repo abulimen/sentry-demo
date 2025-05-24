@@ -239,91 +239,145 @@ paymentButton.addEventListener('click', async () => {
 
             <section id="authentication" class="docs-section">
                 <h2>Authentication</h2>
-                <p>Sentry uses API keys to authenticate requests. You can view and manage your API keys in the Sentry Dashboard.</p>
+                <p>Sentry authenticates your API requests using your account's API keys. If you do not include your key when making an API request, or use an incorrect or outdated one, Sentry returns a <code>401 - Unauthorized</code> HTTP response code.</p>
+                <p>All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without authentication will also fail. Remember to handle API errors gracefully in your application, including authentication failures.</p>
 
                 <h3>API Keys</h3>
-                <p>There are two types of API keys:</p>
-
+                <p>Your API keys are available in the Sentry Dashboard under Developer Settings. There are two types of keys, each serving a distinct purpose:</p>
                 <ul>
-                    <li><strong>Public Key</strong>: Safe to include in client-side code. Used for initializing the SDK and creating payment sessions.</li>
-                    <li><strong>Secret Key</strong>: Must be kept secure and only used in server-side code. Used for API calls that require higher privileges.</li>
+                    <li><strong>Public Key (<code>pk_...</code>)</strong>: This key is intended for use in client-side code, such as Sentry.js or mobile applications. It can be safely published as it only has limited permissions, primarily to create payment intents and tokenize information.</li>
+                    <li><strong>Secret Key (<code>sk_...</code>)</strong>: This key must be kept confidential and stored securely on your own servers. Your secret API key can perform any API request to Sentry without restriction, including creating charges, issuing refunds, or managing data. <strong>Never expose your secret key in client-side code.</strong></li>
                 </ul>
 
-                <h3>Authentication Methods</h3>
-                <p>There are two ways to authenticate with the Sentry API:</p>
+                <h3>Using API Keys</h3>
+                <p>To authenticate your server-side API requests, provide your secret API key in the <code>Authorization</code> header of your HTTP requests, using Bearer authentication. For client-side SDKs, you'll typically initialize the library with your public key.</p>
 
-                <h4>1. HTTP Header (Recommended)</h4>
-                <pre><code class="language-bash">Authorization: Bearer sk_test_12345</code></pre>
-
-                <h4>2. Query Parameter</h4>
-                <pre><code class="language-bash">https://api.sentry.com/v1/payments?api_key=sk_test_12345</code></pre>
+                <h4>Server-Side (Bearer Token):</h4>
+                <pre><code class="language-bash">curl https://api.sentrypayments.com/v1/payments \
+  -H "Authorization: Bearer sk_test_YOUR_SECRET_KEY"</code></pre>
+                
+                <h4>Client-Side (JavaScript SDK Example):</h4>
+                <pre><code class="language-javascript">// Initialize Sentry.js with your public key
+const sentry = Sentry('pk_test_YOUR_PUBLIC_KEY');
+// The SDK will then handle including this key in relevant client-side requests.</code></pre>
 
                 <div class="docs-callout warning">
                     <div class="callout-icon warning"></div>
                     <div class="callout-content">
-                        <h3>Security Warning</h3>
-                        <p>Never share your secret API key in publicly accessible areas such as GitHub, client-side code, or in your public-facing application files.</p>
+                        <h3>Security Best Practice</h3>
+                        <p>Never share your secret API key (<code>sk_...</code>) in publicly accessible areas such as GitHub, client-side code, or in your public-facing application files. Treat it with the same level of confidentiality as your passwords.</p>
                     </div>
                 </div>
             </section>
 
             <section id="environments" class="docs-section">
                 <h2>Environments</h2>
-                <p>Sentry provides two environments for development and production use:</p>
+                <p>Sentry provides two distinct environments to ensure a safe and robust development lifecycle: Test mode and Live mode. Each mode has its own independent set of API keys and data. There is no data sharing between the two environments.</p>
 
                 <h3>Test Environment</h3>
-                <p>The test environment is for development and testing. It uses simulated Pi Network transactions that don't involve real currency. Use test API keys (prefixed with <code>pk_test_</code> and <code>sk_test_</code>) for this environment.</p>
-
-                <pre><code class="language-javascript">Sentry.initialize({
-  publicKey: 'pk_test_12345',
-  environment: 'test'
+                <p>The Test environment is designed for development, integration, and testing purposes. It uses simulated Pi Network transactions that do not involve real Pi currency, allowing you to build and verify your integration without any financial risk. Use test API keys (prefixed with <code>pk_test_</code> and <code>sk_test_</code>) for all interactions with this environment.</p>
+                <p><strong>Test API Endpoint:</strong> <code>https://api.sentrypayments.com/v1/test/...</code> (Note: Actual endpoints might not always include '/test/', refer to specific API calls for correct paths. The key itself dictates the environment.)</p>
+                <pre><code class="language-javascript">// Example: Initialize Sentry.js for Test environment
+Sentry.initialize({
+  publicKey: 'pk_test_YOUR_PUBLIC_KEY', // Your actual test public key
 });
+// Our SDKs and API typically infer the environment from the key prefix.
 </code></pre>
 
-                <h3>Production Environment</h3>
-                <p>The production environment processes real Pi Network transactions. Use production API keys (prefixed with <code>pk_live_</code> and <code>sk_live_</code>) for this environment.</p>
-
-                <pre><code class="language-javascript">Sentry.initialize({
-  publicKey: 'pk_live_12345',
-  environment: 'production'
+                <h3>Live (Production) Environment</h3>
+                <p>The Live environment is used for processing real Pi Network transactions with actual Pi currency. Once your integration is thoroughly tested and you are ready to start accepting real payments, you can switch to Live mode using your production API keys (prefixed with <code>pk_live_</code> and <code>sk_live_</code>).</p>
+                <p><strong>Live API Endpoint:</strong> <code>https://api.sentrypayments.com/v1/...</code></p>
+                <pre><code class="language-javascript">// Example: Initialize Sentry.js for Live environment
+Sentry.initialize({
+  publicKey: 'pk_live_YOUR_PUBLIC_KEY', // Your actual live public key
 });
 </code></pre>
 
                 <div class="docs-callout">
                     <div class="callout-icon"></div>
                     <div class="callout-content">
-                        <h3>Tip</h3>
-                        <p>Always test your integration thoroughly in the test environment before switching to production.</p>
+                        <h3>Important Note on Data</h3>
+                        <p>Objects created in one mode (e.g., a payment link in Test mode) are not accessible or visible in the other mode. Always ensure you are using the correct set of API keys corresponding to the environment you intend to interact with.</p>
                     </div>
                 </div>
             </section>
 
             <section id="payment-overview" class="docs-section">
                 <h2>Pi Network Payments Overview</h2>
-                <p>Sentry's payment solution allows you to accept Pi cryptocurrency payments in your application. Our system handles the complexities of blockchain transactions, providing a simple, reliable payment experience.</p>
+                <p>Sentry's Pi Network Payments solution empowers your business to seamlessly accept Pi cryptocurrency from a global user base. Our platform is engineered to abstract the complexities of blockchain interactions, delivering a straightforward, secure, and reliable payment experience for both merchants and their customers.</p>
 
                 <h3>Key Features</h3>
                 <ul>
-                    <li>Seamless Pi Network payment integration</li>
-                    <li>Customizable checkout experience</li>
-                    <li>Detailed transaction history and reporting</li>
-                    <li>Webhook notifications for payment events</li>
-                    <li>Fraud protection and security measures</li>
+                    <li><strong>Effortless Integration:</strong> Quickly embed Pi payment capabilities into your website, mobile app, or platform using our versatile SDKs or by integrating directly with our well-documented REST API.</li>
+                    <li><strong>Secure & Customizable Checkout:</strong> Utilize Sentry's secure, hosted checkout page for a quick setup, or build a fully custom payment flow tailored to your brand's user experience.</li>
+                    <li><strong>Real-time Transaction Confirmations:</strong> Benefit from the inherent speed of the Pi blockchain, coupled with Sentry's optimized processing, for swift transaction confirmations.</li>
+                    <li><strong>Comprehensive Merchant Dashboard:</strong> Monitor all your Pi transactions, manage payments and refunds, and access detailed financial reporting directly from your Sentry merchant dashboard.</li>
+                    <li><strong>Automated Webhook Notifications:</strong> Stay informed with real-time, automated updates for crucial payment events such as successful transactions, processing failures, or refund status changes.</li>
+                    <li><strong>Advanced Security & Fraud Prevention:</strong> Operate with confidence knowing Sentry employs robust security measures and intelligent fraud detection systems specifically designed for Pi transactions.</li>
                 </ul>
 
-                <h3>Payment Flow</h3>
+                <h3>Typical Payment Flow Explained</h3>
                 <ol>
-                    <li>Your application creates a payment intent using our API or SDK</li>
-                    <li>The customer is redirected to our secure checkout page or your custom UI</li>
-                    <li>The customer approves the Pi payment in their Pi wallet</li>
-                    <li>Sentry verifies the transaction on the Pi blockchain</li>
-                    <li>Your application receives a webhook notification or can poll for the payment status</li>
+                    <li><strong>Payment Initiation:</strong> Your application creates a payment intent or a shareable payment link via the Sentry API/SDK, specifying the transaction amount in Pi, order details, and callback URLs.</li>
+                    <li><strong>Customer Authorization:</strong> The customer is directed to a secure Sentry-hosted page (or your custom UI) where they authenticate with their Pi wallet and explicitly approve the transaction details.</li>
+                    <li><strong>Blockchain Interaction & Verification:</strong> Sentry securely processes the transaction, submits it to the Pi blockchain for validation by the network, and diligently awaits confirmation.</li>
+                    <li><strong>Status Confirmation:</strong> Once the transaction achieves finality on the Pi blockchain, Sentry updates the payment status accordingly within our system.</li>
+                    <li><strong>Real-time Notification:</strong> Your application is promptly notified of the successful payment (or any failure) via a configured webhook, or it can poll the payment status using the API for an update.</li>
+                    <li><strong>Order Fulfillment:</strong> Upon confirmation of a successful payment, you can confidently fulfill the customer's order or provide the agreed-upon service.</li>
                 </ol>
 
                 <div class="docs-image">
-                    <img src="assets/images/payment-flow-diagram.png" alt="Payment Flow Diagram">
+                    <img src="assets/images/payment-flow-diagram.png" alt="Detailed visual diagram illustrating the Sentry Pi Payment Flow from initiation to fulfillment">
                 </div>
             </section>
+            
+            <section id="webhooks" class="docs-section">
+                <h2>Webhooks for Real-Time Event Notifications</h2>
+                <p>Sentry utilizes webhooks to proactively notify your application about events that occur in your Sentry account. Webhooks are essential for handling asynchronous events efficiently, such as when a customer's Pi payment is successfully confirmed, a new blockchain-verified review is submitted, or a payment dispute is initiated.</p>
+                <p>By subscribing to webhook events, your application can react immediately to these occurrences without the need for continuous API polling, leading to more responsive and efficient system interactions. This is the recommended way to get notified of changes to the status of your Sentry objects.</p>
+                <h3>Configuring Your Webhook Endpoints</h3>
+                <p>You can add, manage, and test your webhook endpoints directly from the "Developer Settings" -> "Webhooks" section of your Sentry Merchant Dashboard. To add an endpoint, you'll need to provide a publicly accessible HTTPS URL that Sentry can send HTTP POST requests to. You can also select the specific event types you want to subscribe to for each endpoint.</p>
+                <h3>Securing Your Webhook Endpoints</h3>
+                <p>Ensuring the security of your webhook endpoints is critical. You must verify that incoming webhook requests are genuinely from Sentry and not from a malicious third party. Sentry signs each webhook event it sends by including a unique signature in the <code>Sentry-Signature</code> HTTP header. This signature is generated using a secret key specific to your webhook endpoint, which you can find in your Sentry Dashboard. Verifying this signature on your server confirms the authenticity and integrity of the payload. Detailed instructions on signature verification are available in the "Security" section of our API documentation.</p>
+                <h3>Supported Event Types (Examples)</h3>
+                <ul>
+                    <li><code>payment.succeeded</code>: Sent when a Pi payment is successfully processed and confirmed.</li>
+                    <li><code>payment.failed</code>: Sent when a Pi payment attempt fails.</li>
+                    <li><code>review.created</code>: Sent when a new blockchain-verified review is submitted.</li>
+                    <li><code>payout.created</code>: Sent when a payout to your account is initiated.</li>
+                    <li><em>(More event types would be listed here...)</em></li>
+                </ul>
+                <p>Refer to the <a href="#api-reference-webhooks">Webhook Event Types API reference</a> for a complete list of events and their payload structures.</p>
+            </section>
+
+            <section id="review-api" class="docs-section">
+                <h2>Blockchain Reviews API</h2>
+                <p>The Sentry Review API provides programmatic access to manage and leverage your blockchain-verified customer reviews. This API enables you to integrate the trust and transparency of Sentry reviews directly into your applications, websites, and backend systems.</p>
+                <h3>Common Use Cases & Benefits</h3>
+                <ul>
+                    <li><strong>Display Authentic Reviews:</strong> Fetch and showcase verified reviews on your product pages, testimonials sections, or marketing materials to build customer confidence.</li>
+                    <li><strong>Automate Review Requests:</strong> Integrate review submission prompts into your post-purchase customer journeys (e.g., via email or in-app notifications) to encourage feedback.</li>
+                    <li><strong>Data Analysis & Insights:</strong> Aggregate review data, analyze sentiment, and identify trends to gain deeper insights into customer satisfaction and product performance.</li>
+                    <li><strong>System Synchronization:</strong> Keep review data consistent across your various business systems, such as CRM or customer support platforms.</li>
+                </ul>
+                <h3>Key Endpoints & Functionality</h3>
+                <p><em>(Placeholder: This section would typically provide a more detailed breakdown of key API endpoints. For now, a conceptual overview is provided.)</em></p>
+                <ul>
+                    <li><strong><code>GET /v1/reviews</code></strong>: Retrieve a list of verified reviews, with options for filtering by product, rating, date, etc.</li>
+                    <li><strong><code>GET /v1/reviews/{review_id}</code></strong>: Fetch a specific review by its unique ID, including its verification details on the Pi blockchain.</li>
+                    <li><strong><code>POST /v1/reviews/request</code></strong>: Programmatically initiate a review request to a customer after a confirmed transaction.</li>
+                    <li><strong><code>GET /v1/products/{product_id}/stats</code></strong>: Retrieve review statistics for a specific product, such as average rating and review count.</li>
+                </ul>
+                <p>Example: Retrieving verified reviews for a specific product with a minimum rating:</p>
+                <pre><code class="language-bash">curl https://api.sentrypayments.com/v1/reviews \
+  -H "Authorization: Bearer sk_test_YOUR_SECRET_KEY" \
+  -G \
+  --data-urlencode "product_id=prod_A4B8C2" \
+  --data-urlencode "min_rating=4" \
+  --data-urlencode "limit=10"</code></pre>
+                <p>By leveraging the Review API, you can fully integrate the power of Sentry's blockchain-verified reviews, enhancing transparency and building stronger trust with your user base.</p>
+            </section>
+
 
             <!-- More documentation sections would go here -->
 
@@ -339,6 +393,11 @@ paymentButton.addEventListener('click', async () => {
             </div>
         </main>
     </div>
+
+    <!-- Sidebar Toggle for Mobile -->
+    <button class="sidebar-toggle" aria-label="Toggle Documentation Sidebar" aria-expanded="false">
+        <span class="sidebar-toggle-icon"></span>
+    </button>
 
     <!-- Footer -->
     <footer class="footer">
@@ -399,83 +458,8 @@ paymentButton.addEventListener('click', async () => {
     <!-- JavaScript Files -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/animations.js"></script>
+    <script src="assets/js/documentation.js"></script> <!-- Added documentation specific JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scrolling for documentation links
-            const docLinks = document.querySelectorAll('.docs-nav-item a');
-
-            docLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-
-                    if (targetElement) {
-                        // Scroll to target
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-
-                        // Update active class
-                        docLinks.forEach(l => l.parentElement.classList.remove('active'));
-                        this.parentElement.classList.add('active');
-
-                        // Update URL hash without scrolling
-                        history.pushState(null, null, targetId);
-                    }
-                });
-            });
-
-            // Handle initial hash in URL
-            if (window.location.hash) {
-                const targetElement = document.querySelector(window.location.hash);
-
-                if (targetElement) {
-                    setTimeout(() => {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'auto'
-                        });
-
-                        const activeLink = document.querySelector(`.docs-nav-item a[href="${window.location.hash}"]`);
-                        if (activeLink) {
-                            docLinks.forEach(l => l.parentElement.classList.remove('active'));
-                            activeLink.parentElement.classList.add('active');
-                        }
-                    }, 100);
-                }
-            }
-
-            // Handle scrolling to update active section
-            window.addEventListener('scroll', function() {
-                const sections = document.querySelectorAll('.docs-section');
-                let currentSectionId = '';
-
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.offsetHeight;
-
-                    if (window.pageYOffset >= sectionTop - 100 &&
-                        window.pageYOffset < sectionTop + sectionHeight - 100) {
-                        currentSectionId = '#' + section.id;
-                    }
-                });
-
-                if (currentSectionId) {
-                    docLinks.forEach(link => {
-                        link.parentElement.classList.remove('active');
-                        if (link.getAttribute('href') === currentSectionId) {
-                            link.parentElement.classList.add('active');
-                        }
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>

@@ -1,0 +1,5 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="8" ry="8" style="fill:#788BFF;" />
+  <text x="32" y="38" font-family="Inter, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">GUIDE</text>
+  <text x="32" y="52" font-family="Inter, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">ICON</text>
+</svg>

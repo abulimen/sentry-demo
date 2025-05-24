@@ -1,0 +1,253 @@
+/* Styles for careers.html */
+
+/* Page Hero - specific styling for careers page */
+.careers-hero {
+    background-color: var(--blue-charcoal); /* Darker, more professional hero */
+    color: var(--white);
+    padding: 6rem 0 4rem; /* Adjusted padding */
+    text-align: center;
+}
+
+.careers-hero .page-title {
+    color: var(--white);
+    font-size: 4.8rem;
+}
+
+.careers-hero .page-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 2rem;
+    max-width: 700px;
+    margin: 1.5rem auto 3rem auto;
+}
+
+.careers-hero-image {
+    max-width: 500px; /* Control size of hero image */
+    width: 80%;
+    margin: 0 auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Why Work at Sentry Section */
+.why-work-at-sentry-section {
+    padding: 6rem 0;
+    background-color: var(--light-gray);
+}
+
+/* .section-title-center is now global in styles.css */
+
+.why-work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 3rem;
+}
+
+.why-work-item {
+    background-color: var(--white);
+    padding: 3rem 2.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.why-work-icon {
+    width: 48px; /* Standardized icon size */
+    height: 48px;
+    margin: 0 auto 1.5rem auto;
+}
+
+.why-work-title {
+    font-size: 2.2rem; /* h4-ish */
+    color: var(--blue-charcoal);
+    margin-bottom: 1rem;
+}
+
+.why-work-description {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Open Positions Section */
+.open-positions-section {
+    padding: 6rem 0;
+}
+
+/* .section-subtitle-center is now global in styles.css */
+
+.department-openings {
+    margin-bottom: 4rem;
+}
+.department-openings:last-child {
+    margin-bottom: 1rem; /* Reduce margin for last department before "no openings" msg */
+}
+
+.department-title {
+    font-size: 2.4rem; /* h4 */
+    color: var(--blue-charcoal);
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--mid-gray);
+}
+
+.job-listing-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for job cards for clarity */
+    gap: 2rem;
+}
+
+.job-card {
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column; /* Default for smaller screens */
+    justify-content: space-between;
+    align-items: flex-start;
+    border-left: 4px solid var(--cornflower-blue); /* Accent */
+    transition: var(--transition);
+}
+.job-card:hover {
+    box-shadow: var(--shadow-md);
+    border-left-color: var(--royal-blue);
+}
+
+.job-title {
+    font-size: 2rem; /* h5 */
+    color: var(--blue-charcoal);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.job-location {
+    font-size: 1.5rem;
+    color: var(--mid-gray);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+.location-icon {
+    width: 16px; /* As created */
+    height: 16px;
+    margin-right: 0.5rem;
+    opacity: 0.7;
+}
+
+.job-description {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.job-card .btn-outline.btn-small {
+    padding: 0.8rem 1.6rem;
+    font-size: 1.4rem;
+    align-self: flex-start; /* Keep button to the left */
+}
+
+/* For wider screens, make job card content and button align better */
+@media screen and (min-width: 600px) {
+    .job-card {
+        flex-direction: row;
+        align-items: center; /* Align items vertically in the row */
+    }
+    .job-card > div:first-child { /* Content part */
+        flex-grow: 1;
+        margin-right: 1.5rem; /* Space before button */
+    }
+    .job-card .btn-outline.btn-small {
+        align-self: center; /* Vertically center button in row */
+        flex-shrink: 0; /* Prevent button from shrinking */
+    }
+    .job-description {
+        margin-bottom: 0; /* Remove bottom margin when in row layout */
+    }
+}
+
+
+.no-openings-message {
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--dark-gray);
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: var(--light-gray);
+    border-radius: var(--radius-md);
+}
+.no-openings-message a {
+    color: var(--royal-blue);
+    font-weight: 500;
+}
+
+
+/* Our Benefits Section */
+.our-benefits-section {
+    padding: 6rem 0;
+    background-color: var(--light-gray);
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 900px; /* Control max width of benefits grid */
+    margin: 0 auto;
+}
+
+.benefits-list li {
+    font-size: 1.6rem;
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-xs, 0 1px 3px rgba(0,0,0,0.05)); /* Lighter shadow for list items */
+}
+
+.benefit-icon {
+    width: 20px; /* As created (24px was a bit large for inline) */
+    height: 20px;
+    margin-right: 1.2rem;
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+/* How to Apply Section */
+.how-to-apply-section {
+    padding: 6rem 0;
+}
+
+.apply-content-box { /* Similar to .cta-content-box or .join-us-content-box */
+    background-color: var(--cornflower-blue);
+    color: var(--white);
+    padding: 4rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-md);
+}
+
+.apply-content-box .section-title-center {
+    color: var(--white);
+}
+.apply-content-box .section-subtitle-center {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 2.5rem;
+}
+
+.apply-content-box .btn-primary {
+    background-color: var(--white);
+    color: var(--royal-blue);
+    font-weight: 600;
+}
+.apply-content-box .btn-primary:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+}

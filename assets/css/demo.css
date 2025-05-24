@@ -1,0 +1,192 @@
+/* Styles for demo.html */
+
+/* Page Hero - usually covered by styles.css */
+.page-hero {
+    background-color: var(--light-gray);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.page-hero .page-title {
+    color: var(--blue-charcoal);
+    margin-bottom: 1.6rem;
+}
+
+.page-hero .page-subtitle {
+    color: var(--dark-gray);
+    font-size: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Demo Video Section */
+.demo-video-section {
+    padding: 6rem 0;
+    background-color: var(--white); /* Or a slightly different background */
+}
+
+.section-title-center { /* Reusable class for centered titles if not in styles.css */
+    text-align: center;
+    font-size: 3.2rem;
+    color: var(--blue-charcoal);
+    margin-bottom: 1.6rem; /* Adjusted for subtitle */
+}
+
+/* .section-subtitle-center is now global in styles.css */
+
+.video-placeholder-container {
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-lg);
+    overflow: hidden; /* Ensures iframe respects border-radius */
+}
+
+.video-placeholder-container iframe {
+    display: block; /* Removes any extra space below iframe */
+    border: none; /* Ensure no iframe border if not overridden by inline */
+}
+
+/* Demo Highlights Section */
+.demo-highlights-section {
+    padding: 6rem 0;
+    background-color: var(--light-gray);
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+}
+
+.highlight-item {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--radius-md);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.highlight-icon {
+    width: 48px; /* Standardized icon size */
+    height: 48px;
+    margin-bottom: 1.5rem;
+    /* The actual icon SVGs have fill, so no need to set color here unless they are monochrome */
+}
+
+.highlight-title {
+    font-size: 2rem; /* h5 size */
+    color: var(--blue-charcoal);
+    margin-bottom: 1rem;
+}
+
+.highlight-description {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+/* Demo Perspectives Section */
+.demo-perspectives-section {
+    padding: 6rem 0;
+}
+
+.perspective-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4.8rem;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+.perspective-block:last-child {
+    margin-bottom: 0;
+}
+
+.perspective-block.reverse {
+    /* No specific style needed if grid handles order, or use grid-auto-flow: dense */
+}
+
+.perspective-block.reverse .perspective-content {
+    order: 1; /* Example if not using grid for reversing */
+}
+.perspective-block.reverse .perspective-image-container {
+    order: 2; /* Example */
+}
+
+
+.perspective-content .perspective-title {
+    font-size: 2.8rem; /* Slightly smaller than section titles */
+    color: var(--blue-charcoal);
+    margin-bottom: 1.5rem;
+}
+
+.perspective-content p {
+    font-size: 1.6rem;
+    color: var(--dark-gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.perspective-content ul {
+    list-style: none; /* Assuming check-list style is not default from styles.css for ul */
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+
+.perspective-content ul li {
+    font-size: 1.6rem;
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+    padding-left: 2.5rem; /* Space for custom bullet */
+    position: relative;
+}
+
+.perspective-content ul li::before {
+    content: '✓'; /* Simple checkmark, or use SVG background */
+    color: var(--royal-blue);
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+}
+
+.perspective-image {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+@media screen and (max-width: 768px) {
+    .perspective-block,
+    .perspective-block.reverse {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+    .perspective-block.reverse .perspective-content {
+        order: initial; /* Reset order for stacked layout */
+    }
+    .perspective-block.reverse .perspective-image-container {
+        order: initial;
+    }
+    .perspective-image {
+        margin-top: 2rem; /* Add space if image comes after text on mobile */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .video-placeholder-container iframe {
+        height: 300px; /* Adjust height for small mobile screens */
+    }
+    .perspective-content ul li {
+        padding-left: 2rem; /* Reduce padding for very small screens */
+        font-size: 1.5rem;
+    }
+    .perspective-content .perspective-title {
+        font-size: 2.4rem;
+    }
+}
+
+/* CTA section styling is likely global from styles.css */
+.cta {
+    /* Styles are usually global */
+}

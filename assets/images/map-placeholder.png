@@ -1,0 +1,4 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" style="fill:#E0E0E0;" />
+  <text x="400" y="205" font-family="Inter, sans-serif" font-size="24" fill="#666666" text-anchor="middle">Map Placeholder (800x400)</text>
+</svg>

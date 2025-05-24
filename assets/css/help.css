@@ -1,0 +1,228 @@
+/* Styles for help.html */
+
+/* Page Hero - specific styling for help center */
+.help-hero {
+    background-color: var(--royal-blue); /* Main theme color for hero */
+    color: var(--white);
+    padding: 7rem 0;
+    text-align: center;
+}
+
+.help-hero .page-title {
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.help-hero .page-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.8rem; /* Slightly smaller for this context */
+    margin-bottom: 3rem;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.help-search-form {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-md);
+}
+
+.help-search-input {
+    flex-grow: 1;
+    padding: 1.5rem 2rem; /* Larger padding for hero search */
+    border: none;
+    border-radius: var(--radius-md) 0 0 var(--radius-md); /* Rounded left corners */
+    font-size: 1.6rem;
+}
+.help-search-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(120, 139, 255, 0.5); /* Cornflower blue focus */
+}
+
+.help-search-button { /* Re-style if default .btn doesn't fit well */
+    padding: 1.5rem 2.5rem;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0; /* Rounded right corners */
+    font-size: 1.6rem;
+    background-color: var(--cornflower-blue); /* A distinct search button color */
+    color: var(--white);
+}
+.help-search-button:hover {
+    background-color: #6377FF; /* Darker cornflower */
+}
+
+/* FAQ Section */
+.faq-section-detailed {
+    padding: 6rem 0;
+}
+
+.section-title-center { /* Ensure this is globally available or define here */
+    text-align: center;
+    font-size: 3.2rem;
+    color: var(--blue-charcoal);
+    margin-bottom: 4rem;
+}
+
+.faq-category {
+    margin-bottom: 4rem;
+}
+
+.category-title-faq {
+    font-size: 2.4rem; /* h4 */
+    color: var(--blue-charcoal);
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--mid-gray);
+}
+
+.faq-item {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--light-gray);
+}
+.faq-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.faq-question {
+    font-size: 1.8rem; /* h5 or h6 size */
+    color: var(--blue-charcoal); /* Darker for questions */
+    margin-bottom: 1rem;
+    font-weight: 600;
+    /* For JS toggle: cursor: pointer; position: relative; padding-right: 20px; */
+}
+/* For JS toggle: .faq-question::after { content: '+'; position: absolute; right: 0; } */
+/* For JS toggle: .faq-question.active::after { content: '-'; } */
+
+.faq-answer {
+    font-size: 1.6rem;
+    color: var(--dark-gray);
+    line-height: 1.7;
+    padding-left: 1rem; /* Slight indent for answers */
+    /* For JS toggle: display: none; */
+}
+/* For JS toggle: .faq-answer.active { display: block; } */
+.faq-answer a {
+    color: var(--royal-blue);
+    text-decoration: underline;
+}
+.faq-answer a:hover {
+    color: var(--cornflower-blue);
+}
+
+/* Popular Topics Section */
+.popular-topics-section {
+    padding: 6rem 0;
+    background-color: var(--light-gray);
+}
+
+.popular-topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+}
+
+.popular-topic-card {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.popular-topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.popular-topic-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 1.5rem auto; /* Center icon */
+}
+
+.popular-topic-card h4 {
+    font-size: 2rem; /* h5 */
+    color: var(--blue-charcoal);
+    margin-bottom: 0.8rem;
+}
+.popular-topic-card:hover h4 {
+    color: var(--royal-blue);
+}
+
+.popular-topic-card p {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Still Need Help Section */
+.still-need-help-section {
+    padding: 6rem 0;
+}
+
+.help-cta-box { /* Similar to .custom-solution-cta but potentially different bg */
+    background-color: var(--cornflower-blue);
+    color: var(--white);
+    padding: 4rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-md);
+}
+
+.help-cta-box .cta-title-medium { /* Use existing class if defined globally */
+    font-size: 2.8rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.help-cta-box .cta-text-medium { /* Use existing class if defined globally */
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.help-cta-box .btn-primary { /* Ensure contrast */
+    background-color: var(--white);
+    color: var(--royal-blue);
+}
+.help-cta-box .btn-primary:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+@media screen and (max-width: 480px) {
+    .help-search-form {
+        flex-direction: column; /* Stack input and button */
+        box-shadow: none; /* Optional: remove shadow if it looks odd when stacked */
+    }
+    .help-search-input {
+        border-radius: var(--radius-md); /* Full radius when stacked */
+        margin-bottom: 1rem; /* Space between input and button */
+    }
+    .help-search-button {
+        border-radius: var(--radius-md); /* Full radius when stacked */
+        width: 100%; /* Make button full width */
+    }
+    .category-title-faq {
+        font-size: 2rem;
+    }
+    .faq-question {
+        font-size: 1.6rem;
+    }
+    .faq-answer {
+        font-size: 1.5rem;
+    }
+    .popular-topic-card h4 {
+        font-size: 1.8rem;
+    }
+}

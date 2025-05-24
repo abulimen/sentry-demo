@@ -1,0 +1,248 @@
+/* Styles for blog.html */
+
+/* Page Hero - specific styling for blog if needed */
+.blog-hero { /* Use if different from default .page-hero */
+    background-color: var(--cornflower-blue); /* Example: A different background */
+    color: var(--white);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.blog-hero .page-title {
+    color: var(--white);
+}
+
+.blog-hero .page-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Blog Content Section */
+.blog-content-section {
+    padding: 6rem 0;
+}
+
+.blog-layout-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* Main content and sidebar */
+    gap: 4rem;
+}
+
+/* Main Blog Posts Area */
+.blog-posts-area {
+    /* Styles for the area containing blog posts if needed */
+}
+
+.blog-post-preview {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    margin-bottom: 4rem;
+    overflow: hidden; /* To ensure image corners are rounded if needed */
+}
+
+.blog-post-image {
+    width: 100%;
+    height: 300px; /* Adjust as needed */
+    object-fit: cover;
+}
+
+.blog-post-content {
+    padding: 2.5rem;
+}
+
+.blog-post-title {
+    font-size: 2.8rem; /* h3 size */
+    margin-bottom: 1rem;
+}
+
+.blog-post-title a {
+    color: var(--blue-charcoal);
+    text-decoration: none;
+}
+
+.blog-post-title a:hover {
+    color: var(--royal-blue);
+}
+
+.blog-post-meta {
+    font-size: 1.4rem;
+    color: var(--mid-gray);
+    margin-bottom: 1.5rem;
+}
+
+.blog-post-meta a {
+    color: var(--cornflower-blue);
+    text-decoration: none;
+}
+
+.blog-post-meta a:hover {
+    text-decoration: underline;
+}
+
+.blog-post-excerpt {
+    font-size: 1.6rem;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Sidebar */
+.blog-sidebar {
+    /* Styles for the sidebar container */
+}
+
+.sidebar-widget {
+    background-color: var(--light-gray);
+    padding: 2.5rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.widget-title {
+    font-size: 2rem; /* h5 size */
+    color: var(--blue-charcoal);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--cornflower-blue);
+}
+
+.search-form {
+    display: flex;
+    gap: 1rem;
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--mid-gray); /* Softer border */
+    border-radius: var(--radius-sm);
+    font-size: 1.5rem;
+}
+.search-input:focus {
+    outline: none;
+    border-color: var(--royal-blue);
+    box-shadow: 0 0 0 2px rgba(58, 85, 242, 0.2);
+}
+
+
+.search-button { /* Re-style if default .btn doesn't fit well */
+    padding: 1rem 1.8rem; /* Adjust padding for search button */
+}
+
+
+.category-list,
+.recent-posts-list {
+    list-style: none;
+    padding: 0;
+}
+
+.category-list li,
+.recent-posts-list li {
+    margin-bottom: 1rem;
+}
+
+.category-list a,
+.recent-posts-list a {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    text-decoration: none;
+}
+
+.category-list a:hover,
+.recent-posts-list a:hover {
+    color: var(--royal-blue);
+}
+
+.category-list span { /* For post counts */
+    color: var(--mid-gray);
+    font-size: 1.3rem;
+}
+
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tag-link {
+    display: inline-block;
+    background-color: var(--cornflower-blue);
+    color: var(--white);
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--radius-sm);
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.tag-link:hover {
+    background-color: var(--royal-blue);
+    color: var(--white);
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.page-numbers {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    margin: 0 0.5rem;
+    border: 1px solid var(--mid-gray);
+    border-radius: var(--radius-sm);
+    color: var(--dark-gray);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.page-numbers:hover,
+.page-numbers.current {
+    background-color: var(--royal-blue);
+    color: var(--white);
+    border-color: var(--royal-blue);
+}
+
+@media screen and (max-width: 768px) {
+    .blog-layout-container {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+    .blog-sidebar {
+        margin-top: 4rem; /* Add space when stacked */
+    }
+    .blog-post-image {
+        height: auto; /* Let aspect ratio define height */
+        max-height: 250px; /* Max height for mobile */
+    }
+    .blog-post-title {
+        font-size: 2.4rem; /* Adjust title size for mobile */
+    }
+    .blog-post-excerpt {
+        font-size: 1.5rem; /* Adjust excerpt size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .blog-post-image {
+        max-height: 200px; /* Further reduce image height */
+    }
+    .blog-post-title {
+        font-size: 2rem; 
+    }
+    .blog-post-content {
+        padding: 2rem; /* Reduce padding on cards */
+    }
+    .sidebar-widget {
+        padding: 2rem;
+    }
+    .widget-title {
+        font-size: 1.8rem;
+    }
+}

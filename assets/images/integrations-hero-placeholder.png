@@ -1,0 +1,4 @@
+<svg width="500" height="350" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="350" style="fill:#D0D0D0;" />
+  <text x="250" y="180" font-family="Inter, sans-serif" font-size="20" fill="#555555" text-anchor="middle">Integrations Visual (500x350)</text>
+</svg>
