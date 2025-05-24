@@ -1,0 +1,50 @@
+<svg width="500" height="300" viewBox="0 0 500 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="300" rx="16" fill="#F5F7FF"/>
+
+  <rect x="75" y="75" width="350" height="150" rx="12" fill="white"/>
+  <rect x="95" y="95" width="150" height="20" rx="6" fill="#F0F4FF"/>
+  <rect x="105" y="100" width="120" height="10" rx="5" fill="#3A55F2"/>
+
+  <rect x="95" y="130" width="310" height="75" rx="8" fill="#F0F4FF"/>
+  <rect x="105" y="145" width="250" height="10" rx="5" fill="#151924" fill-opacity="0.2"/>
+  <rect x="105" y="165" width="250" height="10" rx="5" fill="#151924" fill-opacity="0.1"/>
+  <rect x="105" y="185" width="180" height="10" rx="5" fill="#151924" fill-opacity="0.1"/>
+
+  <rect x="355" y="95" width="50" height="20" rx="10" fill="#788BFF"/>
+  <path d="M372 105L380 113L388 105" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Blockchain Visualization -->
+  <rect x="100" y="225" width="300" height="3" rx="1.5" fill="#D1D9FF"/>
+
+  <circle cx="130" cy="225" r="15" fill="#3A55F2"/>
+  <rect x="125" y="220" width="10" height="10" rx="2" fill="white"/>
+
+  <circle cx="200" cy="225" r="15" fill="#3A55F2"/>
+  <rect x="195" y="220" width="10" height="10" rx="2" fill="white"/>
+
+  <circle cx="270" cy="225" r="15" fill="#3A55F2"/>
+  <rect x="265" y="220" width="10" height="10" rx="2" fill="white"/>
+
+  <circle cx="340" cy="225" r="15" fill="#3A55F2"/>
+  <rect x="335" y="220" width="10" height="10" rx="2" fill="white"/>
+
+  <path d="M145 225H185" stroke="#3A55F2" stroke-width="2"/>
+  <path d="M215 225H255" stroke="#3A55F2" stroke-width="2"/>
+  <path d="M285 225H325" stroke="#3A55F2" stroke-width="2"/>
+
+  <!-- Star Ratings -->
+  <circle cx="360" cy="150" r="8" fill="#F0F4FF"/>
+  <path d="M360 146L361.5 149H365L362 151L363 154.5L360 152.5L357 154.5L358 151L355 149H358.5L360 146Z" fill="#788BFF"/>
+
+  <circle cx="380" cy="150" r="8" fill="#F0F4FF"/>
+  <path d="M380 146L381.5 149H385L382 151L383 154.5L380 152.5L377 154.5L378 151L375 149H378.5L380 146Z" fill="#788BFF"/>
+
+  <circle cx="400" cy="150" r="8" fill="#F0F4FF"/>
+  <path d="M400 146L401.5 149H405L402 151L403 154.5L400 152.5L397 154.5L398 151L395 149H398.5L400 146Z" fill="#788BFF"/>
+
+  <circle cx="420" cy="150" r="8" fill="#F0F4FF"/>
+  <path d="M420 146L421.5 149H425L422 151L423 154.5L420 152.5L417 154.5L418 151L415 149H418.5L420 146Z" fill="#788BFF"/>
+
+  <circle cx="440" cy="150" r="8" fill="#F0F4FF"/>
+  <path d="M440 146L441.5 149H445L442 151L443 154.5L440 152.5L437 154.5L438 151L435 149H438.5L440 146Z" fill="#788BFF" fill-opacity="0.3"/>
+</svg>

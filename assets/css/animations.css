@@ -1,0 +1,448 @@
+/*
+Sentry Payment Platform - Animations Stylesheet
+*/
+
+/* ===== LOADING SPINNER ===== */
+.loading-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== FADE ANIMATIONS ===== */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-left {
+  animation: fadeInLeft 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-right {
+  animation: fadeInRight 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===== NOTIFICATION SYSTEM ===== */
+.notification {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 16px 24px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: #333;
+  font-size: 16px;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  max-width: 320px;
+}
+
+.notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.notification-success {
+  border-left: 4px solid #4CAF50;
+}
+
+.notification-error {
+  border-left: 4px solid #F44336;
+}
+
+.notification-info {
+  border-left: 4px solid var(--royal-blue);
+}
+
+/* ===== SUCCESS/ERROR INDICATORS ===== */
+.success-message,
+.error-message {
+  text-align: center;
+  padding: 24px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.success-message {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #4CAF50;
+}
+
+.error-message {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: #F44336;
+}
+
+/* Checkmark animation */
+.checkmark-circle {
+  width: 56px;
+  height: 56px;
+  position: relative;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+}
+
+.checkmark {
+  width: 28px;
+  height: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%) rotate(-45deg);
+  transform-origin: center;
+}
+
+.checkmark:before,
+.checkmark:after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.checkmark:before {
+  width: 3px;
+  height: 14px;
+  left: 0;
+  animation: checkmark-height 0.4s ease-in-out 0.2s forwards;
+  transform: scaleY(0);
+}
+
+.checkmark:after {
+  width: 28px;
+  height: 3px;
+  bottom: 0;
+  animation: checkmark-width 0.4s ease-in-out 0.4s forwards;
+  transform: scaleX(0);
+}
+
+@keyframes checkmark-height {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes checkmark-width {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* Error X animation */
+.error-circle {
+  width: 56px;
+  height: 56px;
+  position: relative;
+  background-color: #F44336;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  box-shadow: 0 2px 8px rgba(244, 67, 54, 0.3);
+}
+
+.error-x {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.error-x:before,
+.error-x:after {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  top: 12px;
+  left: 0;
+}
+
+.error-x:before {
+  transform: rotate(45deg) scaleX(0);
+  animation: error-x-1 0.4s ease-in-out 0.2s forwards;
+}
+
+.error-x:after {
+  transform: rotate(-45deg) scaleX(0);
+  animation: error-x-2 0.4s ease-in-out 0.4s forwards;
+}
+
+@keyframes error-x-1 {
+  0% {
+    transform: rotate(45deg) scaleX(0);
+  }
+  100% {
+    transform: rotate(45deg) scaleX(1);
+  }
+}
+
+@keyframes error-x-2 {
+  0% {
+    transform: rotate(-45deg) scaleX(0);
+  }
+  100% {
+    transform: rotate(-45deg) scaleX(1);
+  }
+}
+
+/* ===== BUTTON HOVER EFFECTS ===== */
+.btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.btn:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.btn:hover:before {
+  width: 100%;
+}
+
+/* ===== PAYMENT FLOW ANIMATIONS ===== */
+.payment-flow-animation {
+  position: relative;
+  height: 120px;
+  margin: 32px 0;
+}
+
+.payment-step {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.payment-step.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.payment-flow-line {
+  position: absolute;
+  top: 60px;
+  left: 10%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--royal-blue), var(--cornflower-blue));
+  transition: width 4s ease-in-out;
+  border-radius: 3px;
+}
+
+.payment-flow-line.animate {
+  width: 80%;
+}
+
+/* ===== BLOCKCHAIN VERIFICATION ANIMATION ===== */
+.blockchain-verify-animation {
+  position: relative;
+  height: 160px;
+  margin: 32px 0;
+}
+
+.blockchain-nodes {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.blockchain-node {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(58, 85, 242, 0.2);
+  position: relative;
+  opacity: 0.5;
+  transition: all 0.4s ease;
+}
+
+.blockchain-node.active {
+  background-color: rgba(58, 85, 242, 1);
+  box-shadow: 0 0 16px rgba(58, 85, 242, 0.6);
+  opacity: 1;
+}
+
+.blockchain-node:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  height: 2px;
+  background-color: rgba(58, 85, 242, 0.4);
+  width: calc(100% - 48px);
+  transform: translateY(-50%);
+}
+
+.blockchain-node:last-child:before {
+  display: none;
+}
+
+.verification-status {
+  text-align: center;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.verification-status.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.review-hash {
+  padding: 8px 16px;
+  background-color: rgba(58, 85, 242, 0.1);
+  border-radius: 4px;
+  font-family: monospace;
+  margin: 16px 0;
+}
+
+/* ===== REVEAL ON SCROLL ANIMATIONS ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.3s;
+}
+
+.reveal-delay-4 {
+  transition-delay: 0.4s;
+}
+
+/* ===== HOVER CARD EFFECTS ===== */
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== PULSE ANIMATION ===== */
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(58, 85, 242, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(58, 85, 242, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(58, 85, 242, 0);
+  }
+}

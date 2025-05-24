@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Sentry Payment Platform</title>
+    <meta name="description" content="Create an account on Sentry to start accepting Pi Network payments and integrating blockchain-verified reviews">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="auth-body">
+    <div class="auth-container">
+        <div class="auth-brand">
+            <a href="index.html">
+                <img src="assets/images/sentry-logo.svg" alt="Sentry" class="auth-logo">
+            </a>
+        </div>
+
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1>Create your account</h1>
+                <p>Start accepting Pi payments and integrating blockchain-verified reviews</p>
+            </div>
+
+            <form class="auth-form" id="signup-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Doe" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Work Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@company.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company" placeholder="Your Company, Inc">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-input">
+                        <input type="password" id="password" name="password" placeholder="Create a password (min. 8 characters)" required minlength="8">
+                        <button type="button" class="password-toggle" aria-label="Toggle password visibility"></button>
+                    </div>
+                    <div class="password-strength">
+                        <div class="strength-meter">
+                            <span class="strength-segment"></span>
+                            <span class="strength-segment"></span>
+                            <span class="strength-segment"></span>
+                            <span class="strength-segment"></span>
+                        </div>
+                        <span class="strength-text">Password strength</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a></label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Send me product updates and news (optional)</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">Create account</button>
+
+                <div class="auth-divider">
+                    <span>or</span>
+                </div>
+
+                <button type="button" class="btn btn-outline btn-social google-auth">
+                    <img src="assets/images/icon-google.svg" alt="Google"> Sign up with Google
+                </button>
+
+                <button type="button" class="btn btn-outline btn-social github-auth">
+                    <img src="assets/images/icon-github.svg" alt="GitHub"> Sign up with GitHub
+                </button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Already have an account? <a href="login.html">Log in</a></p>
+            </div>
+        </div>
+
+        <div class="auth-help">
+            <p>Need help? <a href="contact.html">Contact our support team</a></p>
+            <p class="auth-legal">
+                By creating an account, you agree to our <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.
+            </p>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Password visibility toggle
+            const passwordToggle = document.querySelector('.password-toggle');
+            const passwordInput = document.querySelector('#password');
+
+            passwordToggle.addEventListener('click', function() {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                this.classList.toggle('visible');
+            });
+
+            // Password strength meter
+            const strengthMeter = document.querySelector('.strength-meter');
+            const strengthText = document.querySelector('.strength-text');
+            const strengthSegments = document.querySelectorAll('.strength-segment');
+
+            passwordInput.addEventListener('input', function() {
+                const password = this.value;
+                let strength = 0;
+
+                // Length check
+                if (password.length >= 8) {
+                    strength += 1;
+                }
+
+                // Contains uppercase
+                if (/[A-Z]/.test(password)) {
+                    strength += 1;
+                }
+
+                // Contains number
+                if (/[0-9]/.test(password)) {
+                    strength += 1;
+                }
+
+                // Contains special character
+                if (/[^A-Za-z0-9]/.test(password)) {
+                    strength += 1;
+                }
+
+                // Update strength meter
+                strengthSegments.forEach((segment, index) => {
+                    if (index < strength) {
+                        segment.classList.add('active');
+                    } else {
+                        segment.classList.remove('active');
+                    }
+                });
+
+                // Update strength text
+                if (password.length === 0) {
+                    strengthText.textContent = 'Password strength';
+                    strengthText.className = 'strength-text';
+                } else if (strength === 0 || strength === 1) {
+                    strengthText.textContent = 'Weak';
+                    strengthText.className = 'strength-text weak';
+                } else if (strength === 2) {
+                    strengthText.textContent = 'Fair';
+                    strengthText.className = 'strength-text fair';
+                } else if (strength === 3) {
+                    strengthText.textContent = 'Good';
+                    strengthText.className = 'strength-text good';
+                } else {
+                    strengthText.textContent = 'Strong';
+                    strengthText.className = 'strength-text strong';
+                }
+            });
+
+            // Form submission
+            const signupForm = document.getElementById('signup-form');
+
+            signupForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const firstName = document.getElementById('first-name').value;
+                const lastName = document.getElementById('last-name').value;
+                const email = document.getElementById('email').value;
+                const company = document.getElementById('company').value;
+                const password = document.getElementById('password').value;
+
+                const submitButton = this.querySelector('button[type="submit"]');
+                const originalText = submitButton.textContent;
+
+                // Show loading state
+                submitButton.innerHTML = '<span class="loading-spinner"></span> Creating account...';
+                submitButton.disabled = true;
+
+                // Simulate API call
+                setTimeout(() => {
+                    // For demo purposes, redirect to dashboard
+                    window.location.href = 'dashboard.html';
+
+                    // In case redirection fails, reset the button
+                    submitButton.innerHTML = originalText;
+                    submitButton.disabled = false;
+                }, 1500);
+            });
+
+            // Social auth buttons
+            const socialButtons = document.querySelectorAll('.btn-social');
+
+            socialButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const originalText = this.innerHTML;
+
+                    // Show loading state
+                    this.innerHTML = '<span class="loading-spinner"></span> Connecting...';
+                    this.disabled = true;
+
+                    // Simulate API call
+                    setTimeout(() => {
+                        // For demo purposes, redirect to dashboard
+                        window.location.href = 'dashboard.html';
+
+                        // In case redirection fails, reset the button
+                        this.innerHTML = originalText;
+                        this.disabled = false;
+                    }, 1500);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

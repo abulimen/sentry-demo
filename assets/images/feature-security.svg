@@ -1,0 +1,43 @@
+<svg width="500" height="300" viewBox="0 0 500 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="300" rx="16" fill="#F5F7FF"/>
+
+  <!-- Security Shield Background -->
+  <rect x="50" y="50" width="400" height="200" rx="12" fill="white"/>
+
+  <!-- Shield -->
+  <path d="M250 80L320 110V160C320 185.196 297.5 210 250 230C202.5 210 180 185.196 180 160V110L250 80Z" fill="#F0F4FF"/>
+  <path d="M250 80L320 110V160C320 185.196 297.5 210 250 230C202.5 210 180 185.196 180 160V110L250 80Z" stroke="#3A55F2" stroke-width="2"/>
+
+  <!-- Checkmark -->
+  <path d="M230 160L245 175L270 140" stroke="#3A55F2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Connection Lines -->
+  <path d="M150 90C130 110 120 140 120 160" stroke="#788BFF" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 4"/>
+  <circle cx="120" cy="160" r="8" fill="#788BFF"/>
+
+  <path d="M350 90C370 110 380 140 380 160" stroke="#788BFF" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 4"/>
+  <circle cx="380" cy="160" r="8" fill="#788BFF"/>
+
+  <path d="M150 230C130 210 120 180 120 160" stroke="#788BFF" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 4"/>
+  <circle cx="150" cy="230" r="8" fill="#788BFF"/>
+
+  <path d="M350 230C370 210 380 180 380 160" stroke="#788BFF" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 4"/>
+  <circle cx="350" cy="230" r="8" fill="#788BFF"/>
+
+  <!-- Lock -->
+  <rect x="235" y="100" width="30" height="25" rx="4" fill="#3A55F2"/>
+  <path d="M240 100V90C240 85 245 80 250 80C255 80 260 85 260 90V100" stroke="#3A55F2" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="250" cy="110" r="3" fill="white"/>
+  <path d="M250 110V118" stroke="white" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Security Elements -->
+  <rect x="90" y="90" width="40" height="10" rx="5" fill="#F0F4FF"/>
+  <rect x="90" y="130" width="60" height="10" rx="5" fill="#F0F4FF"/>
+  <rect x="90" y="170" width="50" height="10" rx="5" fill="#F0F4FF"/>
+  <rect x="90" y="210" width="40" height="10" rx="5" fill="#F0F4FF"/>
+
+  <rect x="370" y="90" width="40" height="10" rx="5" fill="#F0F4FF"/>
+  <rect x="350" y="130" width="60" height="10" rx="5" fill="#F0F4FF"/>
+  <rect x="360" y="170" width="50" height="10" rx="5" fill="#F0F4FF"/>
+  <rect x="370" y="210" width="40" height="10" rx="5" fill="#F0F4FF"/>
+</svg>

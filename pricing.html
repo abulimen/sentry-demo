@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Sentry Payment Platform</title>
+    <meta name="description" content="Explore Sentry's transparent pricing for Pi Network payments and blockchain-verified reviews">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/sentry-logo.svg" alt="Sentry">
+                    </a>
+                </div>
+
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Why Sentry <span class="arrow-down"></span></a>
+                            <div class="dropdown-content">
+                                <a href="why-choose-sentry.html">Why Choose Sentry</a>
+                                <a href="success-rates.html">Success Rates</a>
+                                <a href="demo.html">Demo</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="customers.html" class="nav-link">Customers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pricing.html" class="nav-link">Pricing</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Learn <span class="arrow-down"></span></a>
+                            <div class="dropdown-content">
+                                <a href="blog.html">Blog</a>
+                                <a href="guides.html">Guides</a>
+                                <a href="tutorials.html">Tutorials</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Developers <span class="arrow-down"></span></a>
+                            <div class="dropdown-content">
+                                <a href="developers.html">Overview</a>
+                                <a href="documentation.html">Documentation</a>
+                                <a href="integrations.html">Integrations</a>
+                                <a href="status.html">Status</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Support <span class="arrow-down"></span></a>
+                            <div class="dropdown-content">
+                                <a href="help.html">Help Center</a>
+                                <a href="contact.html">Contact Us</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-buttons">
+                    <a href="login.html" class="btn btn-text">Log in</a>
+                    <a href="signup.html" class="btn btn-primary">Create account</a>
+                </div>
+
+                <button class="mobile-menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Pricing Hero Section -->
+        <section class="hero pricing-hero">
+            <div class="container">
+                <div class="hero-content text-center">
+                    <h1 class="hero-title">Simple, transparent pricing</h1>
+                    <p class="hero-subtitle">Start with our free plan. Scale to the plan that best fits your business needs.</p>
+                    <div class="pricing-toggle">
+                        <span class="toggle-label">Monthly</span>
+                        <label class="switch">
+                            <input type="checkbox" id="billingToggle">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="toggle-label">Annual <span class="save-badge">Save 20%</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Plans Section -->
+        <section class="pricing-plans">
+            <div class="container">
+                <div class="plans-container">
+                    <!-- Starter Plan -->
+                    <div class="pricing-plan">
+                        <div class="plan-header">
+                            <h3 class="plan-name">Starter</h3>
+                            <div class="plan-price">
+                                <span class="price monthly">$0</span>
+                                <span class="price annual" style="display: none;">$0</span>
+                                <span class="billing-period">/month</span>
+                            </div>
+                            <p class="plan-description">Perfect for new businesses getting started with Pi payments</p>
+                        </div>
+                        <div class="plan-features">
+                            <ul class="check-list">
+                                <li>Accept Pi Network payments</li>
+                                <li>Basic review verification</li>
+                                <li>Up to 100 transactions per month</li>
+                                <li>2.9% + π0.30 per transaction</li>
+                                <li>Standard customer support</li>
+                            </ul>
+                        </div>
+                        <div class="plan-action">
+                            <a href="signup.html" class="btn btn-outline btn-full">Get started</a>
+                        </div>
+                    </div>
+
+                    <!-- Growth Plan -->
+                    <div class="pricing-plan featured">
+                        <div class="plan-badge">Popular</div>
+                        <div class="plan-header">
+                            <h3 class="plan-name">Growth</h3>
+                            <div class="plan-price">
+                                <span class="price monthly">$49</span>
+                                <span class="price annual" style="display: none;">$39</span>
+                                <span class="billing-period">/month</span>
+                            </div>
+                            <p class="plan-description">For growing businesses processing more payments</p>
+                        </div>
+                        <div class="plan-features">
+                            <ul class="check-list">
+                                <li>All Starter features</li>
+                                <li>Advanced review verification</li>
+                                <li>Up to 1,000 transactions per month</li>
+                                <li>1.9% + π0.25 per transaction</li>
+                                <li>Priority customer support</li>
+                                <li>Advanced analytics dashboard</li>
+                                <li>Review widget for your website</li>
+                            </ul>
+                        </div>
+                        <div class="plan-action">
+                            <a href="signup.html" class="btn btn-primary btn-full">Get started</a>
+                        </div>
+                    </div>
+
+                    <!-- Scale Plan -->
+                    <div class="pricing-plan">
+                        <div class="plan-header">
+                            <h3 class="plan-name">Scale</h3>
+                            <div class="plan-price">
+                                <span class="price monthly">$199</span>
+                                <span class="price annual" style="display: none;">$159</span>
+                                <span class="billing-period">/month</span>
+                            </div>
+                            <p class="plan-description">For established businesses with high volume</p>
+                        </div>
+                        <div class="plan-features">
+                            <ul class="check-list">
+                                <li>All Growth features</li>
+                                <li>Enterprise-grade review verification</li>
+                                <li>Up to 10,000 transactions per month</li>
+                                <li>0.9% + π0.20 per transaction</li>
+                                <li>24/7 priority support</li>
+                                <li>Advanced fraud protection</li>
+                                <li>Dedicated account manager</li>
+                                <li>Custom review verification flows</li>
+                            </ul>
+                        </div>
+                        <div class="plan-action">
+                            <a href="signup.html" class="btn btn-outline btn-full">Get started</a>
+                        </div>
+                    </div>
+
+                    <!-- Enterprise Plan -->
+                    <div class="pricing-plan">
+                        <div class="plan-header">
+                            <h3 class="plan-name">Enterprise</h3>
+                            <div class="plan-price">
+                                <span class="price">Custom</span>
+                            </div>
+                            <p class="plan-description">For large businesses with custom requirements</p>
+                        </div>
+                        <div class="plan-features">
+                            <ul class="check-list">
+                                <li>All Scale features</li>
+                                <li>Unlimited transactions</li>
+                                <li>Custom transaction fees</li>
+                                <li>Custom integration support</li>
+                                <li>24/7 premium support</li>
+                                <li>Dedicated account & success team</li>
+                                <li>Custom contracts and terms</li>
+                                <li>Enterprise SLA</li>
+                            </ul>
+                        </div>
+                        <div class="plan-action">
+                            <a href="contact.html" class="btn btn-outline btn-full">Contact sales</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Table Section -->
+        <section class="comparison">
+            <div class="container">
+                <h2 class="section-title">Compare Features</h2>
+
+                <div class="comparison-table-container">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Starter</th>
+                                <th>Growth</th>
+                                <th>Scale</th>
+                                <th>Enterprise</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Pi Network Payments</td>
+                                <td><span class="check"></span></td>
+                                <td><span class="check"></span></td>
+                                <td><span class="check"></span></td>
+                                <td><span class="check"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Transaction Fee</td>
+                                <td>2.9% + π0.30</td>
+                                <td>1.9% + π0.25</td>
+                                <td>0.9% + π0.20</td>
+                                <td>Custom</td>
+                            </tr>
+                            <tr>
+                                <td>Monthly Transactions</td>
+                                <td>100</td>
+                                <td>1,000</td>
+                                <td>10,000</td>
+                                <td>Unlimited</td>
+                            </tr>
+                            <tr>
+                                <td>Review Verification</td>
+                                <td>Basic</td>
+                                <td>Advanced</td>
+                                <td>Enterprise</td>
+                                <td>Custom</td>
+                            </tr>
+                            <tr>
+                                <td>Review Widget</td>
+                                <td><span class="minus"></span></td>
+                                <td><span class="check"></span></td>
+                                <td><span class="check"></span></td>
+                                <td><span class="check"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Analytics Dashboard</td>
+                                <td>Basic</td>
+                                <td>Advanced</td>
+                                <td>Advanced</td>
+                                <td>Custom</td>
+                            </tr>
+                            <tr>
+                                <td>Fraud Protection</td>
+                                <td>Basic</td>
+                                <td>Standard</td>
+                                <td>Advanced</td>
+                                <td>Enterprise</td>
+                            </tr>
+                            <tr>
+                                <td>API Access</td>
+                                <td><span class="check"></span></td>
+                                <td><span class="check"></span></td>
+                                <td><span class="check"></span></td>
+                                <td><span class="check"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Customer Support</td>
+                                <td>Email</td>
+                                <td>Priority Email</td>
+                                <td>24/7 Support</td>
+                                <td>Dedicated Team</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do transaction fees work?</h3>
+                            <span class="faq-toggle"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Transaction fees are charged as a percentage of the total transaction amount plus a fixed fee. For example, with the Starter plan, a π100 transaction would incur a fee of π3.20 (2.9% of π100 + π0.30). Fees are only charged on successful transactions.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I upgrade or downgrade my plan?</h3>
+                            <span class="faq-toggle"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, you can upgrade or downgrade your plan at any time. If you upgrade, you'll be charged the prorated difference for the remainder of your billing cycle. If you downgrade, the new rate will take effect at the beginning of your next billing cycle.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What happens if I exceed my monthly transaction limit?</h3>
+                            <span class="faq-toggle"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>If you exceed your monthly transaction limit, you'll be charged a small overage fee per additional transaction. We'll send you notifications when you reach 80% and 100% of your limit. You can also upgrade to a higher plan at any time to avoid overage fees.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What's the difference between basic and advanced review verification?</h3>
+                            <span class="faq-toggle"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Basic review verification confirms that the reviewer is a real customer who made a purchase. Advanced verification provides additional security by cryptographically signing reviews and storing them on the blockchain with a verification badge that can be displayed on your website. It also includes review analytics and fraud detection.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do you offer refunds?</h3>
+                            <span class="faq-toggle"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer a 30-day money-back guarantee for all paid plans. If you're not satisfied with our service within the first 30 days, contact our support team for a full refund. After 30 days, we do not offer prorated refunds for canceled subscriptions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <h2 class="cta-title">Ready to get started with Sentry?</h2>
+                <p class="cta-subtitle">Join thousands of businesses already using Sentry to accept Pi payments and build trust with verified reviews.</p>
+                <div class="cta-buttons">
+                    <a href="signup.html" class="btn btn-primary">Create free account</a>
+                    <a href="contact.html" class="btn btn-outline">Contact sales</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="assets/images/sentry-logo-white.svg" alt="Sentry">
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="payments.html">Payments</a></li>
+                            <li><a href="reviews.html">Verified Reviews</a></li>
+                            <li><a href="analytics.html">Analytics</a></li>
+                            <li><a href="security.html">Security</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="guides.html">Guides</a></li>
+                            <li><a href="documentation.html">Documentation</a></li>
+                            <li><a href="support.html">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="customers.html">Customers</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><img src="assets/images/icon-twitter.svg" alt="Twitter"></a>
+                    <a href="#" class="social-icon"><img src="assets/images/icon-linkedin.svg" alt="LinkedIn"></a>
+                    <a href="#" class="social-icon"><img src="assets/images/icon-facebook.svg" alt="Facebook"></a>
+                    <a href="#" class="social-icon"><img src="assets/images/icon-instagram.svg" alt="Instagram"></a>
+                </div>
+                <div class="footer-legal">
+                    <p>&copy; 2025 Sentry. All rights reserved.</p>
+                    <ul class="legal-links">
+                        <li><a href="terms.html">Terms</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="cookies.html">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+
+    <!-- Add Pricing Toggle Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize FAQ accordion
+            initFaqAccordion();
+
+            // Initialize pricing toggle
+            initPricingToggle();
+        });
+
+        function initFaqAccordion() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+
+                question.addEventListener('click', function() {
+                    // Toggle active class on the clicked item
+                    item.classList.toggle('active');
+
+                    // Get answer element
+                    const answer = item.querySelector('.faq-answer');
+
+                    // Toggle height
+                    if (item.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    } else {
+                        answer.style.maxHeight = '0';
+                    }
+                });
+            });
+        }
+
+        function initPricingToggle() {
+            const toggle = document.getElementById('billingToggle');
+            const monthlyPrices = document.querySelectorAll('.price.monthly');
+            const annualPrices = document.querySelectorAll('.price.annual');
+
+            toggle.addEventListener('change', function() {
+                if (this.checked) {
+                    // Annual billing
+                    monthlyPrices.forEach(price => price.style.display = 'none');
+                    annualPrices.forEach(price => price.style.display = 'inline');
+                } else {
+                    // Monthly billing
+                    monthlyPrices.forEach(price => price.style.display = 'inline');
+                    annualPrices.forEach(price => price.style.display = 'none');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

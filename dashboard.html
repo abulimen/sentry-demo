@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sentry Payment Platform</title>
+    <meta name="description" content="Experience the Sentry dashboard demo for Pi payments and blockchain-verified reviews">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <!-- Dashboard Header -->
+    <header class="dashboard-header">
+        <div class="dashboard-logo">
+            <a href="index.html">
+                <img src="assets/images/sentry-logo.svg" alt="Sentry">
+            </a>
+        </div>
+
+        <div class="dashboard-nav">
+            <ul class="dashboard-nav-list">
+                <li class="dashboard-nav-item active">
+                    <a href="#" class="dashboard-nav-link">Dashboard</a>
+                </li>
+                <li class="dashboard-nav-item">
+                    <a href="#" class="dashboard-nav-link">Payments</a>
+                </li>
+                <li class="dashboard-nav-item">
+                    <a href="#" class="dashboard-nav-link">Reviews</a>
+                </li>
+                <li class="dashboard-nav-item">
+                    <a href="#" class="dashboard-nav-link">Analytics</a>
+                </li>
+                <li class="dashboard-nav-item">
+                    <a href="#" class="dashboard-nav-link">Settings</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dashboard-user">
+            <div class="notifications">
+                <span class="notification-icon"></span>
+                <span class="notification-badge">3</span>
+            </div>
+            <div class="user-profile">
+                <img src="assets/images/user-avatar.jpg" alt="User Profile">
+                <span class="user-name">Demo User</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Sidebar -->
+    <aside class="dashboard-sidebar">
+        <nav class="sidebar-nav">
+            <ul class="sidebar-nav-list">
+                <li class="sidebar-nav-item active">
+                    <a href="#" class="sidebar-nav-link">
+                        <span class="sidebar-icon dashboard-icon"></span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#" class="sidebar-nav-link">
+                        <span class="sidebar-icon payments-icon"></span>
+                        <span>Payments</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#" class="sidebar-nav-link">
+                        <span class="sidebar-icon reviews-icon"></span>
+                        <span>Reviews</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#" class="sidebar-nav-link">
+                        <span class="sidebar-icon customers-icon"></span>
+                        <span>Customers</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#" class="sidebar-nav-link">
+                        <span class="sidebar-icon analytics-icon"></span>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#" class="sidebar-nav-link">
+                        <span class="sidebar-icon settings-icon"></span>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="index.html" class="btn btn-outline btn-sm">Exit Demo</a>
+        </div>
+    </aside>
+
+    <!-- Dashboard Content -->
+    <main class="dashboard-content">
+        <div class="page-header">
+            <h1>Dashboard</h1>
+            <p class="page-subtitle">Welcome to the Sentry Dashboard Demo</p>
+        </div>
+
+        <!-- Quick Stats -->
+        <section class="dashboard-stats">
+            <div class="stat-card">
+                <div class="stat-icon payment-stat"></div>
+                <div class="stat-content">
+                    <h3 class="stat-value count-up" data-target="12546" data-prefix="π">π0</h3>
+                    <p class="stat-label">Total Pi Payments</p>
+                </div>
+                <div class="stat-change positive">+15.3%</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon customer-stat"></div>
+                <div class="stat-content">
+                    <h3 class="stat-value count-up" data-target="847">0</h3>
+                    <p class="stat-label">Total Customers</p>
+                </div>
+                <div class="stat-change positive">+7.2%</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon review-stat"></div>
+                <div class="stat-content">
+                    <h3 class="stat-value count-up" data-target="2134">0</h3>
+                    <p class="stat-label">Verified Reviews</p>
+                </div>
+                <div class="stat-change positive">+23.8%</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon conversion-stat"></div>
+                <div class="stat-content">
+                    <h3 class="stat-value count-up" data-target="68" data-suffix="%">0%</h3>
+                    <p class="stat-label">Conversion Rate</p>
+                </div>
+                <div class="stat-change positive">+5.4%</div>
+            </div>
+        </section>
+
+        <!-- Dashboard Tabs -->
+        <section class="dashboard-tabs" id="dashboard-demo">
+            <div class="tabs-header">
+                <button class="dashboard-tab active" data-target="overview">Overview</button>
+                <button class="dashboard-tab" data-target="payments">Payments</button>
+                <button class="dashboard-tab" data-target="reviews">Reviews</button>
+                <button class="dashboard-tab" data-target="reports">Reports</button>
+            </div>
+
+            <div class="dashboard-panels">
+                <!-- Overview Panel -->
+                <div class="dashboard-panel active" id="overview">
+                    <div class="panel-grid">
+                        <div class="panel-item wide">
+                            <h3>Payment Activity</h3>
+                            <div class="chart-container data-chart">
+                                <div class="chart-placeholder">
+                                    <div class="chart-bars">
+                                        <div class="chart-bar" style="height: 40%"></div>
+                                        <div class="chart-bar" style="height: 65%"></div>
+                                        <div class="chart-bar" style="height: 85%"></div>
+                                        <div class="chart-bar" style="height: 55%"></div>
+                                        <div class="chart-bar" style="height: 75%"></div>
+                                        <div class="chart-bar" style="height: 90%"></div>
+                                        <div class="chart-bar" style="height: 70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-item">
+                            <h3>Top Products</h3>
+                            <div class="product-list">
+                                <div class="product-item">
+                                    <div class="product-info">
+                                        <h4>Product A</h4>
+                                        <p>342 sales</p>
+                                    </div>
+                                    <div class="product-percentage" style="width: 85%"></div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-info">
+                                        <h4>Product B</h4>
+                                        <p>256 sales</p>
+                                    </div>
+                                    <div class="product-percentage" style="width: 65%"></div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-info">
+                                        <h4>Product C</h4>
+                                        <p>189 sales</p>
+                                    </div>
+                                    <div class="product-percentage" style="width: 45%"></div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-info">
+                                        <h4>Product D</h4>
+                                        <p>127 sales</p>
+                                    </div>
+                                    <div class="product-percentage" style="width: 32%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-item">
+                            <h3>Review Distribution</h3>
+                            <div class="chart-container data-chart">
+                                <div class="chart-placeholder donut-chart">
+                                    <div class="donut-segment s1"></div>
+                                    <div class="donut-segment s2"></div>
+                                    <div class="donut-segment s3"></div>
+                                    <div class="donut-hole"></div>
+                                </div>
+                                <div class="chart-legend">
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background-color: #4CAF50"></span>
+                                        <span>5-star (68%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background-color: #FFC107"></span>
+                                        <span>4-star (24%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background-color: #2196F3"></span>
+                                        <span>3-star & below (8%)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-item wide">
+                            <h3>Recent Transactions</h3>
+                            <div class="transaction-list">
+                                <div class="transaction-item">
+                                    <div class="transaction-info">
+                                        <h4>Order #38291</h4>
+                                        <p>Product A, B</p>
+                                    </div>
+                                    <div class="transaction-details">
+                                        <span class="transaction-amount">π125.00</span>
+                                        <span class="transaction-status success">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="transaction-item">
+                                    <div class="transaction-info">
+                                        <h4>Order #38290</h4>
+                                        <p>Product C</p>
+                                    </div>
+                                    <div class="transaction-details">
+                                        <span class="transaction-amount">π75.50</span>
+                                        <span class="transaction-status success">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="transaction-item">
+                                    <div class="transaction-info">
+                                        <h4>Order #38289</h4>
+                                        <p>Product D</p>
+                                    </div>
+                                    <div class="transaction-details">
+                                        <span class="transaction-amount">π45.00</span>
+                                        <span class="transaction-status pending">Pending</span>
+                                    </div>
+                                </div>
+                                <div class="transaction-item">
+                                    <div class="transaction-info">
+                                        <h4>Order #38288</h4>
+                                        <p>Product A</p>
+                                    </div>
+                                    <div class="transaction-details">
+                                        <span class="transaction-amount">π89.99</span>
+                                        <span class="transaction-status success">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="transaction-item">
+                                    <div class="transaction-info">
+                                        <h4>Order #38287</h4>
+                                        <p>Product B, C</p>
+                                    </div>
+                                    <div class="transaction-details">
+                                        <span class="transaction-amount">π120.75</span>
+                                        <span class="transaction-status failed">Failed</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payments Panel -->
+                <div class="dashboard-panel" id="payments">
+                    <div class="panel-header">
+                        <h2>Pi Network Payments</h2>
+                        <div class="panel-actions">
+                            <button class="btn btn-secondary">Create Payment</button>
+                        </div>
+                    </div>
+
+                    <div class="payment-demo-container">
+                        <div class="payment-form-container">
+                            <h3>Process a Payment</h3>
+                            <form id="payment-demo-form" class="payment-form">
+                                <div class="form-group">
+                                    <label for="payment-amount">Amount (Pi)</label>
+                                    <input type="number" id="payment-amount" value="100" min="1" step="0.01" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="payment-description">Description</label>
+                                    <input type="text" id="payment-description" value="Product purchase" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="payment-email">Customer Email</label>
+                                    <input type="email" id="payment-email" value="customer@example.com" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Process Payment</button>
+                            </form>
+                        </div>
+
+                        <div class="payment-result-container">
+                            <div id="payment-result" class="payment-result">
+                                <div class="placeholder-text">Payment result will appear here</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reviews Panel -->
+                <div class="dashboard-panel" id="reviews">
+                    <div class="panel-header">
+                        <h2>Blockchain-Verified Reviews</h2>
+                        <div class="panel-actions">
+                            <button class="btn btn-secondary">Manage Reviews</button>
+                        </div>
+                    </div>
+
+                    <div class="review-demo-container">
+                        <div class="review-form-container">
+                            <h3>Verify a Review</h3>
+                            <form id="review-demo-form" class="review-form">
+                                <div class="form-group">
+                                    <label for="reviewer-name">Customer Name</label>
+                                    <input type="text" id="reviewer-name" value="Jane Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="review-rating">Rating</label>
+                                    <div class="rating-input">
+                                        <span class="star active" data-value="1"></span>
+                                        <span class="star active" data-value="2"></span>
+                                        <span class="star active" data-value="3"></span>
+                                        <span class="star active" data-value="4"></span>
+                                        <span class="star active" data-value="5"></span>
+                                        <input type="hidden" id="review-rating" value="5">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="review-text">Review Text</label>
+                                    <textarea id="review-text" rows="4" required>I absolutely love the product! It exceeded my expectations in every way. The quality is outstanding and the customer service was excellent. Highly recommended!</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="purchase-id">Purchase ID</label>
+                                    <input type="text" id="purchase-id" value="ORD-38291" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Verify on Blockchain</button>
+                            </form>
+                        </div>
+
+                        <div class="review-result-container">
+                            <div id="review-result" class="review-result">
+                                <div class="placeholder-text">Verification result will appear here</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reports Panel -->
+                <div class="dashboard-panel" id="reports">
+                    <div class="panel-header">
+                        <h2>Analytics Reports</h2>
+                        <div class="panel-actions">
+                            <button class="btn btn-secondary">Generate Report</button>
+                        </div>
+                    </div>
+
+                    <div class="reports-container">
+                        <div class="report-filters">
+                            <div class="filter-group">
+                                <label>Date Range</label>
+                                <select>
+                                    <option>Last 7 days</option>
+                                    <option>Last 30 days</option>
+                                    <option>Last 90 days</option>
+                                    <option>Custom Range</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label>Report Type</label>
+                                <select>
+                                    <option>Sales Overview</option>
+                                    <option>Customer Behavior</option>
+                                    <option>Review Analytics</option>
+                                    <option>Conversion Funnel</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-secondary">Apply Filters</button>
+                        </div>
+
+                        <div class="report-content">
+                            <div class="report-chart-container data-chart">
+                                <div class="chart-placeholder line-chart">
+                                    <div class="chart-line"></div>
+                                    <div class="chart-dots">
+                                        <span class="chart-dot" style="left: 0%; bottom: 20%"></span>
+                                        <span class="chart-dot" style="left: 16.6%; bottom: 40%"></span>
+                                        <span class="chart-dot" style="left: 33.3%; bottom: 60%"></span>
+                                        <span class="chart-dot" style="left: 50%; bottom: 45%"></span>
+                                        <span class="chart-dot" style="left: 66.6%; bottom: 70%"></span>
+                                        <span class="chart-dot" style="left: 83.3%; bottom: 80%"></span>
+                                        <span class="chart-dot" style="left: 100%; bottom: 65%"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="report-metrics">
+                                <div class="report-metric">
+                                    <h4>Total Revenue</h4>
+                                    <p class="metric-value">π12,546.75</p>
+                                    <p class="metric-change positive">+15.3% vs previous period</p>
+                                </div>
+                                <div class="report-metric">
+                                    <h4>Average Order Value</h4>
+                                    <p class="metric-value">π89.62</p>
+                                    <p class="metric-change positive">+3.7% vs previous period</p>
+                                </div>
+                                <div class="report-metric">
+                                    <h4>Conversion Rate</h4>
+                                    <p class="metric-value">68%</p>
+                                    <p class="metric-change positive">+5.4% vs previous period</p>
+                                </div>
+                                <div class="report-metric">
+                                    <h4>Repeat Customer Rate</h4>
+                                    <p class="metric-value">42%</p>
+                                    <p class="metric-change positive">+8.1% vs previous period</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

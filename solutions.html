@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions - Sentry Payment Platform</title>
+    <meta name="description" content="Explore Sentry's suite of payment solutions for businesses of all sizes">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/sentry-logo.svg" alt="Sentry">
+                    </a>
+                </div>
+
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Why Sentry <span class="arrow-down"></span></a>
+                            <div class="dropdown-content">
+                                <a href="why-choose-sentry.html">Why Choose Sentry</a>
+                                <a href="success-rates.html">Success Rates</a>
+                                <a href="demo.html">Demo</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="customers.html" class="nav-link">Customers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pricing.html" class="nav-link">Pricing</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Learn <span class="arrow-down"></span></a>
+                            <div class="dropdown-content">
+                                <a href="blog.html">Blog</a>
+                                <a href="guides.html">Guides</a>
+                                <a href="tutorials.html">Tutorials</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Developers <span class="arrow-down"></span></a>
+                            <div class="dropdown-content">
+                                <a href="developers.html">Overview</a>
+                                <a href="documentation.html">Documentation</a>
+                                <a href="integrations.html">Integrations</a>
+                                <a href="status.html">Status</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Support <span class="arrow-down"></span></a>
+                            <div class="dropdown-content">
+                                <a href="help.html">Help Center</a>
+                                <a href="contact.html">Contact Us</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-buttons">
+                    <a href="login.html" class="btn btn-text">Log in</a>
+                    <a href="signup.html" class="btn btn-primary">Create account</a>
+                </div>
+
+                <button class="mobile-menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero solutions-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Payment solutions built for growth</h1>
+                    <p class="hero-subtitle">From startups to enterprises, Sentry provides customizable payment solutions that scale with your business.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solutions Section -->
+        <section class="solutions">
+            <div class="container">
+                <h2 class="section-title">Solutions for every business need</h2>
+
+                <!-- Solution Categories -->
+                <div class="solution-categories">
+                    <div class="solution-category reveal fade-in-up">
+                        <div class="category-icon">
+                            <img src="assets/images/icon-payment.svg" alt="Payment Icon">
+                        </div>
+                        <h3>Pi Network Payments</h3>
+                        <p>Accept Pi cryptocurrency payments seamlessly through your website or app. Simple integration, fast settlement.</p>
+                        <a href="pi-payments.html" class="btn btn-secondary">Learn more</a>
+                    </div>
+
+                    <div class="solution-category reveal fade-in-up reveal-delay-1">
+                        <div class="category-icon">
+                            <img src="assets/images/icon-review.svg" alt="Review Icon">
+                        </div>
+                        <h3>Blockchain Reviews</h3>
+                        <p>Build trust with immutable, verified customer reviews stored securely on the blockchain.</p>
+                        <a href="blockchain-reviews.html" class="btn btn-secondary">Learn more</a>
+                    </div>
+
+                    <div class="solution-category reveal fade-in-up reveal-delay-2">
+                        <div class="category-icon">
+                            <img src="assets/images/icon-analytics.svg" alt="Analytics Icon">
+                        </div>
+                        <h3>Business Analytics</h3>
+                        <p>Powerful insights into your payments, customer behavior, and review sentiment to drive growth.</p>
+                        <a href="business-analytics.html" class="btn btn-secondary">Learn more</a>
+                    </div>
+                </div>
+
+                <!-- Pi Payment Solution -->
+                <div class="solution-detail">
+                    <div class="solution-image reveal fade-in-left">
+                        <img src="assets/images/feature-payment.svg" alt="Pi Payment Solution">
+                    </div>
+                    <div class="solution-content reveal fade-in-right">
+                        <h3>Accept Pi Network payments anywhere</h3>
+                        <p>Our Pi Network payment solution allows your business to accept Pi cryptocurrency across multiple platforms with ease.</p>
+
+                        <ul class="check-list">
+                            <li>Simple API integration into websites and apps</li>
+                            <li>Customizable checkout experience</li>
+                            <li>Real-time transaction monitoring</li>
+                            <li>Detailed payment analytics</li>
+                            <li>Secure transaction processing</li>
+                        </ul>
+
+                        <div class="payment-flow-demo" id="payment-flow-demo">
+                            <div class="payment-flow-animation">
+                                <div class="payment-step">Customer initiates payment with Pi</div>
+                                <div class="payment-step">Sentry verifies transaction</div>
+                                <div class="payment-step">Payment confirmed on blockchain</div>
+                                <div class="payment-step">Funds delivered to merchant</div>
+                                <div class="payment-flow-line"></div>
+                            </div>
+                            <button id="start-payment-demo" class="btn btn-secondary">See payment flow</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blockchain Review Solution -->
+                <div class="solution-detail reverse">
+                    <div class="solution-content reveal fade-in-left">
+                        <h3>Blockchain-verified customer reviews</h3>
+                        <p>Build trust with verified reviews that cannot be altered or removed, giving customers confidence in the authenticity of feedback.</p>
+
+                        <ul class="check-list">
+                            <li>Tamper-proof review verification</li>
+                            <li>Blockchain-based immutability</li>
+                            <li>Reviewer authentication</li>
+                            <li>Review verification badge for your website</li>
+                            <li>Review analytics and sentiment analysis</li>
+                        </ul>
+
+                        <div class="blockchain-verify-demo" id="blockchain-verify-demo">
+                            <div class="blockchain-verify-animation">
+                                <div class="blockchain-nodes">
+                                    <div class="blockchain-node"></div>
+                                    <div class="blockchain-node"></div>
+                                    <div class="blockchain-node"></div>
+                                    <div class="blockchain-node"></div>
+                                    <div class="blockchain-node"></div>
+                                </div>
+                                <div class="verification-status"></div>
+                            </div>
+                            <button id="start-blockchain-demo" class="btn btn-secondary">See verification flow</button>
+                        </div>
+                    </div>
+                    <div class="solution-image reveal fade-in-right">
+                        <img src="assets/images/feature-reviews.svg" alt="Blockchain Review Solution">
+                    </div>
+                </div>
+
+                <!-- Analytics Solution -->
+                <div class="solution-detail">
+                    <div class="solution-image reveal fade-in-left">
+                        <img src="assets/images/feature-analytics.svg" alt="Analytics Solution">
+                    </div>
+                    <div class="solution-content reveal fade-in-right">
+                        <h3>Comprehensive business analytics</h3>
+                        <p>Turn data into actionable insights with our powerful analytics platform that helps you understand payments, customers, and reviews.</p>
+
+                        <ul class="check-list">
+                            <li>Real-time transaction monitoring</li>
+                            <li>Customer behavior analysis</li>
+                            <li>Review sentiment tracking</li>
+                            <li>Customizable reporting</li>
+                            <li>Data visualization tools</li>
+                        </ul>
+
+                        <div class="analytics-metrics">
+                            <div class="metric">
+                                <span class="count-up" data-target="99" data-suffix="%">0%</span>
+                                <span class="metric-label">Payment Success Rate</span>
+                            </div>
+                            <div class="metric">
+                                <span class="count-up" data-target="40" data-suffix="%">0%</span>
+                                <span class="metric-label">Conversion Increase</span>
+                            </div>
+                            <div class="metric">
+                                <span class="count-up" data-target="65" data-suffix="%">0%</span>
+                                <span class="metric-label">Trust Improvement</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industry Solutions -->
+        <section class="industry-solutions">
+            <div class="container">
+                <h2 class="section-title">Solutions by industry</h2>
+                <p class="section-subtitle">Tailored payment and review solutions for your specific industry needs</p>
+
+                <div class="industry-grid">
+                    <div class="industry-card hover-card reveal fade-in-up">
+                        <div class="industry-icon">
+                            <img src="assets/images/icon-retail.svg" alt="Retail Icon">
+                        </div>
+                        <h3>Retail & E-commerce</h3>
+                        <p>Boost conversion rates with seamless checkout and verified product reviews.</p>
+                        <a href="retail-solutions.html" class="btn btn-text">Learn more →</a>
+                    </div>
+
+                    <div class="industry-card hover-card reveal fade-in-up reveal-delay-1">
+                        <div class="industry-icon">
+                            <img src="assets/images/icon-saas.svg" alt="SaaS Icon">
+                        </div>
+                        <h3>SaaS & Subscription</h3>
+                        <p>Streamline recurring payments and build trust with verified service reviews.</p>
+                        <a href="saas-solutions.html" class="btn btn-text">Learn more →</a>
+                    </div>
+
+                    <div class="industry-card hover-card reveal fade-in-up reveal-delay-2">
+                        <div class="industry-icon">
+                            <img src="assets/images/icon-marketplace.svg" alt="Marketplace Icon">
+                        </div>
+                        <h3>Marketplaces</h3>
+                        <p>Facilitate secure transactions between buyers and sellers with embedded payments.</p>
+                        <a href="marketplace-solutions.html" class="btn btn-text">Learn more →</a>
+                    </div>
+
+                    <div class="industry-card hover-card reveal fade-in-up reveal-delay-3">
+                        <div class="industry-icon">
+                            <img src="assets/images/icon-platform.svg" alt="Platform Icon">
+                        </div>
+                        <h3>Platforms & Communities</h3>
+                        <p>Scale your platform with Pi payments and build community trust with verified reviews.</p>
+                        <a href="platform-solutions.html" class="btn btn-text">Learn more →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title">Frequently asked questions</h2>
+
+                <div class="faq-container">
+                    <div class="faq-item reveal fade-in-up">
+                        <div class="faq-question">
+                            <h3>How does Pi Network payment integration work?</h3>
+                            <span class="faq-toggle"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sentry provides a simple API that you can integrate into your website or app. When a customer chooses to pay with Pi, our system generates a payment request that connects to their Pi wallet. Once the payment is confirmed on the Pi blockchain, we notify your system and update the order status.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal fade-in-up reveal-delay-1">
+                        <div class="faq-question">
+                            <h3>How are reviews verified on the blockchain?</h3>
+                            <span class="faq-toggle"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>When a customer submits a review, we verify their purchase history and identity (with their permission). The review is then cryptographically signed and stored on a blockchain with a timestamp and verification status. This creates an immutable record that cannot be altered, giving confidence to future customers about the authenticity of the review.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal fade-in-up reveal-delay-2">
+                        <div class="faq-question">
+                            <h3>What types of analytics does Sentry provide?</h3>
+                            <span class="faq-toggle"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sentry's analytics platform provides insights on payment trends, conversion rates, customer behavior, review sentiment, and more. You can access real-time dashboards, custom reports, and data visualizations to help you make informed business decisions.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal fade-in-up reveal-delay-3">
+                        <div class="faq-question">
+                            <h3>Is Sentry secure and compliant with regulations?</h3>
+                            <span class="faq-toggle"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, security is our top priority. Sentry uses enterprise-grade encryption, follows industry best practices for data protection, and is designed to comply with relevant financial and data protection regulations. We continuously update our security measures to address emerging threats.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal fade-in-up reveal-delay-4">
+                        <div class="faq-question">
+                            <h3>How quickly can I get started with Sentry?</h3>
+                            <span class="faq-toggle"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Most businesses can be up and running with Sentry in less than a day. Our simple API, comprehensive documentation, and step-by-step guides make integration straightforward. Our support team is also available to help you with any questions during the setup process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <h2 class="cta-title">Ready to transform your business?</h2>
+                <p class="cta-subtitle">Join thousands of businesses using Sentry to accept Pi payments and build trust with blockchain-verified reviews.</p>
+                <div class="cta-buttons">
+                    <a href="signup.html" class="btn btn-primary">Create free account</a>
+                    <a href="contact.html" class="btn btn-outline">Contact sales</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="assets/images/sentry-logo-white.svg" alt="Sentry">
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="payments.html">Payments</a></li>
+                            <li><a href="reviews.html">Verified Reviews</a></li>
+                            <li><a href="analytics.html">Analytics</a></li>
+                            <li><a href="security.html">Security</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="guides.html">Guides</a></li>
+                            <li><a href="documentation.html">Documentation</a></li>
+                            <li><a href="support.html">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="customers.html">Customers</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><img src="assets/images/icon-twitter.svg" alt="Twitter"></a>
+                    <a href="#" class="social-icon"><img src="assets/images/icon-linkedin.svg" alt="LinkedIn"></a>
+                    <a href="#" class="social-icon"><img src="assets/images/icon-facebook.svg" alt="Facebook"></a>
+                    <a href="#" class="social-icon"><img src="assets/images/icon-instagram.svg" alt="Instagram"></a>
+                </div>
+                <div class="footer-legal">
+                    <p>&copy; 2025 Sentry. All rights reserved.</p>
+                    <ul class="legal-links">
+                        <li><a href="terms.html">Terms</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="cookies.html">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+
+    <!-- Add FAQ Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize FAQ accordion
+            initFaqAccordion();
+        });
+
+        function initFaqAccordion() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+
+                question.addEventListener('click', function() {
+                    // Toggle active class on the clicked item
+                    item.classList.toggle('active');
+
+                    // Get answer element
+                    const answer = item.querySelector('.faq-answer');
+
+                    // Toggle height
+                    if (item.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    } else {
+                        answer.style.maxHeight = '0';
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - Sentry Payment Platform</title>
+    <meta name="description" content="Log in to your Sentry account to manage your Pi Network payments and blockchain-verified reviews">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="auth-body">
+    <div class="auth-container">
+        <div class="auth-brand">
+            <a href="index.html">
+                <img src="assets/images/sentry-logo.svg" alt="Sentry" class="auth-logo">
+            </a>
+        </div>
+
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1>Log in to your account</h1>
+                <p>Enter your credentials to access your dashboard</p>
+            </div>
+
+            <form class="auth-form" id="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-input">
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        <button type="button" class="password-toggle" aria-label="Toggle password visibility"></button>
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <a href="forgot-password.html" class="forgot-password">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">Log in</button>
+
+                <div class="auth-divider">
+                    <span>or</span>
+                </div>
+
+                <button type="button" class="btn btn-outline btn-social google-auth">
+                    <img src="assets/images/icon-google.svg" alt="Google"> Continue with Google
+                </button>
+
+                <button type="button" class="btn btn-outline btn-social github-auth">
+                    <img src="assets/images/icon-github.svg" alt="GitHub"> Continue with GitHub
+                </button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+            </div>
+        </div>
+
+        <div class="auth-help">
+            <p>Need help? <a href="contact.html">Contact our support team</a></p>
+            <p class="auth-legal">
+                By logging in, you agree to our <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.
+            </p>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Password visibility toggle
+            const passwordToggle = document.querySelector('.password-toggle');
+            const passwordInput = document.querySelector('#password');
+
+            passwordToggle.addEventListener('click', function() {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                this.classList.toggle('visible');
+            });
+
+            // Form submission
+            const loginForm = document.getElementById('login-form');
+
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+
+                const submitButton = this.querySelector('button[type="submit"]');
+                const originalText = submitButton.textContent;
+
+                // Show loading state
+                submitButton.innerHTML = '<span class="loading-spinner"></span> Logging in...';
+                submitButton.disabled = true;
+
+                // Simulate API call
+                setTimeout(() => {
+                    // For demo purposes, redirect to dashboard
+                    window.location.href = 'dashboard.html';
+
+                    // In case redirection fails, reset the button
+                    submitButton.innerHTML = originalText;
+                    submitButton.disabled = false;
+                }, 1500);
+            });
+
+            // Social auth buttons
+            const socialButtons = document.querySelectorAll('.btn-social');
+
+            socialButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const originalText = this.innerHTML;
+
+                    // Show loading state
+                    this.innerHTML = '<span class="loading-spinner"></span> Connecting...';
+                    this.disabled = true;
+
+                    // Simulate API call
+                    setTimeout(() => {
+                        // For demo purposes, redirect to dashboard
+                        window.location.href = 'dashboard.html';
+
+                        // In case redirection fails, reset the button
+                        this.innerHTML = originalText;
+                        this.disabled = false;
+                    }, 1500);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
