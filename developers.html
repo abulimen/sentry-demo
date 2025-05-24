@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentry for Developers | API & Integration Resources</title>
+    <meta name="description" content="Integrate Sentry's powerful Pi Network payment and review APIs. Access documentation, SDKs, and developer tools to start building.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/developers.css"> <!-- Specific styles for developers page -->
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/sentry-logo.svg" alt="Sentry">
+                    </a>
+                </div>
+
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Why Sentry <span class="arrow-down"></span></a>
+                            <div class="dropdown-content">
+                                <a href="why-choose-sentry.html">Why Choose Sentry</a>
+                                <a href="success-rates.html">Success Rates</a>
+                                <a href="demo.html">Demo</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="customers.html" class="nav-link">Customers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pricing.html" class="nav-link">Pricing</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Learn <span class="arrow-down"></span></a>
+                            <div class="dropdown-content">
+                                <a href="blog.html">Blog</a>
+                                <a href="guides.html">Guides</a>
+                                <a href="tutorials.html">Tutorials</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Developers <span class="arrow-down"></span></a>
+                            <div class="dropdown-content">
+                                <a href="developers.html">Overview</a>
+                                <a href="documentation.html">Documentation</a>
+                                <a href="integrations.html">Integrations</a>
+                                <a href="status.html">Status</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Support <span class="arrow-down"></span></a>
+                            <div class="dropdown-content">
+                                <a href="help.html">Help Center</a>
+                                <a href="contact.html">Contact Us</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-buttons">
+                    <a href="login.html" class="btn btn-text">Log in</a>
+                    <a href="signup.html" class="btn btn-primary">Create account</a>
+                </div>
+
+                <button class="mobile-menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Developers Hero Section -->
+        <section class="page-hero developers-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <h1 class="page-title">Build with Sentry: Powerful APIs for Pi Network</h1>
+                    <p class="page-subtitle">Integrate seamless Pi payments and blockchain-verified reviews into your applications with our robust, developer-friendly APIs and tools.</p>
+                    <div class="hero-buttons">
+                        <a href="documentation.html" class="btn btn-primary">View API Docs</a>
+                        <a href="signup.html?plan=pioneer" class="btn btn-outline">Get API Keys</a>
+                    </div>
+                </div>
+                <div class="hero-image-dev">
+                    <!-- Placeholder for a developer-centric image or code snippet visual -->
+                    <img src="assets/images/dev-hero-placeholder.png" alt="Sentry API Integration Visual">
+                </div>
+            </div>
+        </section>
+
+        <!-- Getting Started Section -->
+        <section class="getting-started-dev">
+            <div class="container">
+                <h2 class="section-title-center">Start Integrating in Minutes</h2>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Create Your Account</h3>
+                        <p class="step-description">Sign up for a free Sentry Pioneer account to get instant access to our platform.</p>
+                        <a href="signup.html" class="step-link">Sign Up Free</a>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Get Your API Keys</h3>
+                        <p class="step-description">Find your unique API keys in the Sentry dashboard to authenticate your requests.</p>
+                        <a href="login.html" class="step-link">Access Dashboard</a>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Explore Documentation</h3>
+                        <p class="step-description">Dive into our comprehensive API docs, guides, and references to understand endpoints and capabilities.</p>
+                        <a href="documentation.html" class="step-link">Read Docs</a>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">Start Building</h3>
+                        <p class="step-description">Use our SDKs and tools, or integrate directly to bring Pi payments and reviews to your app.</p>
+                        <a href="#developer-tools" class="step-link">See Tools</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- API Overview Section -->
+        <section class="api-overview-section">
+            <div class="container">
+                <h2 class="section-title-center">Core Sentry APIs</h2>
+                <p class="section-subtitle-center">Flexible and powerful APIs to meet your integration needs.</p>
+                <div class="api-features-grid">
+                    <div class="api-feature-card">
+                        <img src="assets/images/icon-api-payments.svg" alt="Payments API Icon" class="api-icon">
+                        <h3 class="api-title">Payments API</h3>
+                        <p class="api-description">Integrate Pi Network payments, manage transactions, create payment links, and handle payment events seamlessly.</p>
+                        <a href="documentation.html#payments-api" class="btn btn-text-icon">Explore Payments API <span class="arrow-right"></span></a>
+                    </div>
+                    <div class="api-feature-card">
+                        <img src="assets/images/icon-api-reviews.svg" alt="Reviews API Icon" class="api-icon">
+                        <h3 class="api-title">Reviews API</h3>
+                        <p class="api-description">Programmatically manage blockchain-verified reviews, submit review requests, and retrieve review data for display.</p>
+                        <a href="documentation.html#reviews-api" class="btn btn-text-icon">Explore Reviews API <span class="arrow-right"></span></a>
+                    </div>
+                    <div class="api-feature-card">
+                        <img src="assets/images/icon-api-analytics.svg" alt="Analytics API Icon" class="api-icon">
+                        <h3 class="api-title">Analytics API</h3>
+                        <p class="api-description">Access payment trends, review statistics, and customer engagement data to build custom reports and dashboards.</p>
+                        <a href="documentation.html#analytics-api" class="btn btn-text-icon">Explore Analytics API <span class="arrow-right"></span></a>
+                    </div>
+                     <div class="api-feature-card">
+                        <img src="assets/images/icon-api-webhooks.svg" alt="Webhooks Icon" class="api-icon">
+                        <h3 class="api-title">Webhooks</h3>
+                        <p class="api-description">Receive real-time notifications for important events like successful payments, new reviews, or transaction status changes.</p>
+                        <a href="documentation.html#webhooks" class="btn btn-text-icon">Learn about Webhooks <span class="arrow-right"></span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Developer Tools Section -->
+        <section id="developer-tools" class="developer-tools-section">
+            <div class="container">
+                <h2 class="section-title-center">Tools to Supercharge Your Integration</h2>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <img src="assets/images/icon-tool-sdks.svg" alt="SDKs Icon" class="tool-icon">
+                        <h3 class="tool-name">SDKs & Libraries</h3>
+                        <p class="tool-description">Speed up development with our official SDKs (Python, Node.js coming soon) and community libraries.</p>
+                        <a href="documentation.html#sdks" class="tool-link">View Available SDKs</a>
+                    </div>
+                    <div class="tool-card">
+                        <img src="assets/images/icon-tool-sandbox.svg" alt="Sandbox Icon" class="tool-icon">
+                        <h3 class="tool-name">Sandbox Environment</h3>
+                        <p class="tool-description">Test your integrations thoroughly in a dedicated sandbox environment without affecting live data.</p>
+                        <a href="documentation.html#sandbox" class="tool-link">Access Sandbox Details</a>
+                    </div>
+                    <div class="tool-card">
+                        <img src="assets/images/icon-tool-postman.svg" alt="Postman Icon" class="tool-icon">
+                        <h3 class="tool-name">Postman Collection</h3>
+                        <p class="tool-description">Explore and test Sentry API endpoints quickly using our pre-configured Postman collection.</p>
+                        <a href="documentation.html#postman" class="tool-link">Get Postman Collection</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Code Snippet Example Section -->
+        <section class="code-snippet-section">
+            <div class="container">
+                <h2 class="section-title-center">Example: Create a Payment Link</h2>
+                <p class="section-subtitle-center">Here's a quick peek at how easy it is to use our API. (Illustrative example)</p>
+                <div class="code-block-container">
+                    <pre><code class="language-python"># Python Example
+import sentry_sdk
+
+sentry_sdk.init(api_key="YOUR_API_KEY")
+
+payment_link = sentry_sdk.create_payment_link(
+    amount=10.0,
+    currency="PI",
+    description="Payment for Order #12345",
+    redirect_url="https://yourstore.com/payment_success"
+)
+
+print(payment_link.url)</code></pre>
+                </div>
+                 <p class="code-note">Full examples and more languages available in our documentation.</p>
+            </div>
+        </section>
+
+        <!-- Developer Resources Section -->
+        <section class="developer-resources-section">
+            <div class="container">
+                <h2 class="section-title-center">Your Developer Resource Hub</h2>
+                <div class="resource-links-grid">
+                    <a href="documentation.html" class="resource-link-card">
+                        <img src="assets/images/icon-resource-docs.svg" alt="Documentation Icon">
+                        <h4>Full Documentation</h4>
+                        <p>Comprehensive guides, API references, and tutorials.</p>
+                    </a>
+                    <a href="documentation.html#api-reference" class="resource-link-card">
+                        <img src="assets/images/icon-resource-api-ref.svg" alt="API Reference Icon">
+                        <h4>API Reference</h4>
+                        <p>Detailed information on all Sentry API endpoints.</p>
+                    </a>
+                    <a href="guides.html" class="resource-link-card">
+                        <img src="assets/images/icon-resource-guides.svg" alt="Integration Guides Icon">
+                        <h4>Integration Guides</h4>
+                        <p>Step-by-step instructions for common use cases.</p>
+                    </a>
+                    <a href="status.html" class="resource-link-card">
+                        <img src="assets/images/icon-resource-status.svg" alt="API Status Icon">
+                        <h4>API Status</h4>
+                        <p>Check the current operational status of Sentry services.</p>
+                    </a>
+                     <a href="support.html?context=developer" class="resource-link-card">
+                        <img src="assets/images/icon-resource-support.svg" alt="Developer Support Icon">
+                        <h4>Developer Support</h4>
+                        <p>Get help from our expert team for your integration queries.</p>
+                    </a>
+                     <a href="https://github.com/sentry-payments-example" class="resource-link-card" target="_blank"> <!-- Placeholder Link -->
+                        <img src="assets/images/icon-resource-github.svg" alt="GitHub Icon">
+                        <h4>Sample Code & GitHub</h4>
+                        <p>Explore sample projects and contribute on GitHub.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <h2 class="cta-title">Ready to Build with Sentry?</h2>
+                <p class="cta-subtitle">Access our powerful APIs and start integrating Pi Network payments and verified reviews today.</p>
+                <div class="cta-buttons">
+                    <a href="signup.html?plan=pioneer" class="btn btn-primary">Get Your Free API Key</a>
+                    <a href="contact-sales.html?interest=api" class="btn btn-outline">Discuss Custom Solutions</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="assets/images/sentry-logo-white.svg" alt="Sentry">
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="payments.html">Payments</a></li>
+                            <li><a href="reviews.html">Verified Reviews</a></li>
+                            <li><a href="analytics.html">Analytics</a></li>
+                            <li><a href="security.html">Security</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="guides.html">Guides</a></li>
+                            <li><a href="documentation.html">Documentation</a></li>
+                            <li><a href="support.html">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="customers.html">Customers</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><img src="assets/images/icon-twitter.svg" alt="Twitter"></a>
+                    <a href="#" class="social-icon"><img src="assets/images/icon-linkedin.svg" alt="LinkedIn"></a>
+                    <a href="#" class="social-icon"><img src="assets/images/icon-facebook.svg" alt="Facebook"></a>
+                    <a href="#" class="social-icon"><img src="assets/images/icon-instagram.svg" alt="Instagram"></a>
+                </div>
+                <div class="footer-legal">
+                    <p>&copy; 2025 Sentry. All rights reserved.</p>
+                    <ul class="legal-links">
+                        <li><a href="terms.html">Terms</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="cookies.html">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <!-- Add Prism.js or similar for code highlighting if not globally included -->
+    <!-- <script src="assets/js/prism.js"></script> --> 
+</body>
+</html>
