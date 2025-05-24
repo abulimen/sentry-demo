@@ -1,0 +1,225 @@
+/* Styles for pricing.html */
+
+/* Page Hero - usually covered by styles.css */
+.page-hero {
+    background-color: var(--light-gray);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.page-hero .page-title {
+    color: var(--blue-charcoal);
+    margin-bottom: 1.6rem;
+}
+
+.page-hero .page-subtitle {
+    color: var(--dark-gray);
+    font-size: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Pricing Table Section */
+.pricing-table-section {
+    padding: 6rem 0;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    align-items: stretch; /* Make cards of same height if they differ */
+}
+
+.pricing-card {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent; /* For featured state */
+}
+
+.pricing-card.featured {
+    border-color: var(--royal-blue);
+    box-shadow: var(--shadow-lg); /* Emphasize featured card */
+    position: relative;
+    transform: scale(1.03); /* Slightly larger */
+}
+
+.featured-badge {
+    position: absolute;
+    top: -1.5rem; /* Adjust to sit nicely above the card */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--royal-blue);
+    color: var(--white);
+    padding: 0.6rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+.pricing-card-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.plan-name {
+    font-size: 2.8rem; /* h3 size */
+    color: var(--blue-charcoal);
+    margin-bottom: 1rem;
+}
+
+.plan-price {
+    font-size: 3.6rem; /* Larger for price */
+    font-weight: 700;
+    color: var(--royal-blue);
+    margin-bottom: 1rem;
+}
+
+.plan-description {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    margin-bottom: 2rem;
+    min-height: 4.5rem; /* Ensure consistent header height */
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 3rem;
+    flex-grow: 1; /* Makes feature list take available space */
+}
+
+.plan-features li {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: flex-start; /* Align checkmark with first line of text */
+}
+
+.plan-features .feature-icon { /* For the checkmark styling */
+    color: var(--royal-blue);
+    margin-right: 1rem;
+    font-weight: 700; /* Bolder checkmark */
+    line-height: 1.5rem; /* Align with text */
+}
+.plan-features li span:not(.feature-icon) { /* The text part of the feature */
+   flex: 1;
+}
+
+
+.btn-full { /* Button full width within card */
+    width: 100%;
+    margin-top: auto; /* Pushes button to bottom */
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 6rem 0;
+    background-color: var(--light-gray);
+}
+
+/* .section-title-center is now global in styles.css */
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for FAQs usually */
+    gap: 2rem;
+    max-width: 800px; /* Readable width for FAQs */
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.faq-question {
+    font-size: 1.8rem; /* h5 or h6 size */
+    color: var(--blue-charcoal);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    /* Could add a clickable cursor if JS toggle is planned */
+}
+
+.faq-answer {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Custom Solution CTA Section */
+.custom-solution-cta {
+    padding: 6rem 0;
+    background-color: var(--white); /* Or a distinct background */
+}
+
+.cta-content-box { /* A reusable box style if not in styles.css */
+    background-color: var(--cornflower-blue); /* Example color */
+    color: var(--white);
+    padding: 4rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-md);
+}
+
+.cta-title-medium { /* For titles within these boxes */
+    font-size: 2.8rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.cta-text-medium {
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.custom-solution-cta .btn-primary {
+    background-color: var(--white);
+    color: var(--royal-blue);
+}
+.custom-solution-cta .btn-primary:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+@media screen and (max-width: 768px) {
+    .pricing-card.featured {
+        transform: scale(1); /* Reset scale on smaller screens */
+        /* Optionally, still keep a slightly more prominent shadow or border if desired */
+        box-shadow: var(--shadow-lg); 
+    }
+    .pricing-grid {
+        gap: 2rem; /* Reduce gap slightly on smaller screens */
+    }
+    .plan-price {
+        font-size: 3.2rem; /* Slightly reduce price font size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pricing-card {
+        padding: 2rem; /* Reduce padding for very small screens */
+    }
+    .plan-features li {
+        font-size: 1.4rem;
+    }
+    .featured-badge {
+        top: -1rem; /* Adjust badge position slightly */
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+    }
+}

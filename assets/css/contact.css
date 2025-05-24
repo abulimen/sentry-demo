@@ -1,0 +1,197 @@
+/* Styles for contact.html */
+
+/* Page Hero - specific styling for contact page */
+.contact-hero {
+    background-color: var(--light-gray); /* Or another subtle background */
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.contact-hero .page-title {
+    color: var(--blue-charcoal);
+    margin-bottom: 1.5rem;
+}
+
+.contact-hero .page-subtitle {
+    color: var(--dark-gray);
+    font-size: 1.8rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contact Details Section */
+.contact-details-section {
+    padding: 6rem 0;
+}
+
+.contact-layout-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Form slightly larger */
+    gap: 5rem;
+}
+
+/* Contact Form Column */
+.contact-form-column .section-title-small { /* Assuming a smaller title class */
+    font-size: 2.4rem; /* h4 */
+    color: var(--blue-charcoal);
+    margin-bottom: 2.5rem;
+}
+
+.contact-form-placeholder .form-group {
+    margin-bottom: 2rem;
+}
+
+.contact-form-placeholder label {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--blue-charcoal);
+    margin-bottom: 0.8rem;
+}
+
+.contact-form-placeholder input[type="text"],
+.contact-form-placeholder input[type="email"],
+.contact-form-placeholder textarea {
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.6rem;
+    border: 1px solid var(--mid-gray);
+    border-radius: var(--radius-md);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form-placeholder input[type="text"]:focus,
+.contact-form-placeholder input[type="email"]:focus,
+.contact-form-placeholder textarea:focus {
+    outline: none;
+    border-color: var(--royal-blue);
+    box-shadow: 0 0 0 3px rgba(58, 85, 242, 0.2);
+}
+
+.contact-form-placeholder textarea {
+    resize: vertical; /* Allow vertical resize */
+    min-height: 120px;
+}
+
+.contact-form-placeholder .btn-primary.btn-full { /* For full width button */
+    width: 100%;
+    padding: 1.5rem; /* Larger padding for main action */
+    font-size: 1.6rem;
+}
+
+
+/* Contact Info Column */
+.contact-info-column .section-title-small {
+    font-size: 2.4rem; /* h4 */
+    color: var(--blue-charcoal);
+    margin-bottom: 2.5rem;
+}
+
+.contact-method {
+    display: flex;
+    align-items: flex-start; /* Align icon with top of text */
+    margin-bottom: 2.5rem;
+    gap: 1.5rem;
+}
+.contact-method:last-child {
+    margin-bottom: 0;
+}
+
+.contact-icon {
+    width: 32px; /* Smaller icons for contact methods */
+    height: 32px;
+    flex-shrink: 0; /* Prevent icon from shrinking */
+    /* Icon color is in SVG, or can be targeted if it's a font icon */
+}
+
+.contact-method-details h4 {
+    font-size: 1.8rem; /* h6 */
+    color: var(--blue-charcoal);
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+}
+
+.contact-method-details p {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+.contact-method-details p a {
+    color: var(--royal-blue);
+    text-decoration: none;
+}
+.contact-method-details p a:hover {
+    text-decoration: underline;
+}
+.contact-method-details p small {
+    font-size: 1.3rem;
+    color: var(--mid-gray);
+}
+
+.social-media-links-contact {
+    display: flex;
+    gap: 1rem; /* Space between social icons */
+}
+.social-icon-contact img { /* Assuming these are small SVGs/imgs */
+    width: 28px;
+    height: 28px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+.social-icon-contact:hover img {
+    opacity: 1;
+}
+
+
+/* Map Section */
+.map-section {
+    padding: 6rem 0;
+    background-color: var(--light-gray); /* Or remove for seamless */
+}
+
+.map-section .section-title-center {
+    margin-bottom: 3rem;
+}
+
+.map-placeholder {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #E0E0E0; /* Fallback if image fails */
+    border-radius: var(--radius-md);
+    overflow: hidden; /* If using iframe map */
+    box-shadow: var(--shadow-md);
+}
+
+.map-placeholder img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+.map-caption {
+    font-size: 1.3rem;
+    color: var(--mid-gray);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+/* Responsive Adjustments */
+@media screen and (max-width: 992px) { /* Tablet and below */
+    .contact-layout-container {
+        grid-template-columns: 1fr; /* Stack columns */
+        gap: 4rem; /* Adjust gap for stacked layout */
+    }
+    .contact-info-column {
+        margin-top: 2rem; /* Add space above info column when stacked */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-form-column .section-title-small,
+    .contact-info-column .section-title-small {
+        text-align: center; /* Center titles on small mobile */
+    }
+}

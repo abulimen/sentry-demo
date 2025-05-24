@@ -1,0 +1,245 @@
+/* Styles for about.html */
+
+/* Page Hero - specific styling for about page */
+.about-hero {
+    background: var(--light-gray); /* Subtle background */
+    padding: 6rem 0;
+    text-align: center;
+    margin-top: 8rem; /* Account for fixed header */
+}
+
+.about-hero .page-title {
+    color: var(--blue-charcoal); /* Main heading color */
+    font-size: 4.8rem; /* Prominent title */
+}
+
+.about-hero .page-subtitle {
+    color: var(--dark-gray);
+    font-size: 2rem;
+    max-width: 750px; /* Control width of text content */
+    margin: 1.5rem auto 0 auto; /* Center content and add margin */
+}
+
+/* Our Story Section */
+.our-story-section {
+    padding: 6rem 0;
+}
+
+.story-content-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Text slightly larger column */
+    gap: 5rem;
+    align-items: center;
+}
+
+.section-title-left { /* For titles aligned to the left */
+    font-size: 3.2rem;
+    color: var(--blue-charcoal);
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+
+.story-text p {
+    font-size: 1.6rem;
+    color: var(--dark-gray);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+.story-text p:last-child {
+    margin-bottom: 0;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+/* Our Mission & Vision Section */
+.mission-vision-section {
+    padding: 6rem 0;
+    background-color: var(--light-gray);
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+}
+
+.mission-card, .vision-card {
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    text-align: center; /* Center icon and title */
+}
+
+.mv-icon { /* Mission/Vision Icon */
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 1.5rem auto;
+}
+
+.mv-title {
+    font-size: 2.4rem; /* h4 */
+    color: var(--blue-charcoal);
+    margin-bottom: 1rem;
+}
+
+.mission-card p, .vision-card p {
+    font-size: 1.6rem;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Our Values Section */
+.our-values-section {
+    padding: 6rem 0;
+}
+
+/* .section-title-center is now global in styles.css */
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.value-item {
+    text-align: center;
+    padding: 2rem;
+}
+
+.value-icon {
+    width: 56px; /* Slightly larger for values */
+    height: 56px;
+    margin: 0 auto 1.5rem auto;
+}
+
+.value-name {
+    font-size: 2rem; /* h5 */
+    color: var(--blue-charcoal);
+    margin-bottom: 0.8rem;
+}
+
+.value-description {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Our Team Section */
+.our-team-section {
+    padding: 6rem 0;
+    background-color: var(--light-gray);
+}
+
+/* .section-subtitle-center is now global in styles.css */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 3rem;
+}
+
+.team-member-card {
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.team-member-img {
+    width: 120px; /* As created */
+    height: 120px;
+    border-radius: 50%; /* Circular images */
+    margin: 0 auto 1.5rem auto;
+    object-fit: cover; /* Ensure image covers the area */
+    border: 3px solid var(--cornflower-blue); /* Accent border */
+}
+
+.team-member-name {
+    font-size: 2rem; /* h5 */
+    color: var(--blue-charcoal);
+    margin-bottom: 0.5rem;
+}
+
+.team-member-title {
+    font-size: 1.5rem;
+    color: var(--royal-blue);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.team-member-bio {
+    font-size: 1.4rem;
+    color: var(--dark-gray);
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Join Us Section */
+.join-us-section {
+    padding: 6rem 0;
+    background-color: var(--white); /* Or a distinct color */
+}
+
+.join-us-content-box { /* Similar to .cta-content-box but for this page */
+    background-color: var(--blue-charcoal);
+    color: var(--white);
+    padding: 4rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-md);
+}
+.join-us-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 1.5rem auto;
+}
+
+.join-us-content-box .cta-title-medium {
+    font-size: 2.8rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.join-us-content-box .cta-text-medium {
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.join-us-content-box .btn-primary {
+    background-color: var(--cornflower-blue);
+    color: var(--blue-charcoal);
+    font-weight: 600;
+}
+.join-us-content-box .btn-primary:hover {
+    background-color: var(--white);
+    color: var(--royal-blue);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .story-content-layout {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+    .story-image {
+        margin-top: 3rem;
+        order: -1; /* Image on top when stacked */
+    }
+    .section-title-left {
+        text-align: center; /* Center title on mobile */
+    }
+    .about-hero {
+        margin-top: 0; /* Remove fixed header margin if header becomes static on mobile */
+    }
+}

@@ -29,36 +29,30 @@
 
         <div class="auth-card">
             <div class="auth-header">
-                <h1>Create your account</h1>
+                <h1>Create Your Sentry Account</h1>
                 <p>Start accepting Pi payments and integrating blockchain-verified reviews</p>
             </div>
 
             <form class="auth-form" id="signup-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" name="first-name" placeholder="John" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" name="last-name" placeholder="Doe" required>
-                    </div>
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="e.g., John Doe" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Work Email</label>
+                    <label for="email">Email Address</label>
                     <input type="email" id="email" name="email" placeholder="you@company.com" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="company">Company Name</label>
-                    <input type="text" id="company" name="company" placeholder="Your Company, Inc">
+                    <label for="company">Company Name (Optional)</label>
+                    <input type="text" id="company" name="company" placeholder="Your Company, Inc.">
                 </div>
 
                 <div class="form-group">
                     <label for="password">Password</label>
                     <div class="password-input">
-                        <input type="password" id="password" name="password" placeholder="Create a password (min. 8 characters)" required minlength="8">
+                        <input type="password" id="password" name="password" placeholder="Create a strong password (min. 8 characters)" required minlength="8">
                         <button type="button" class="password-toggle" aria-label="Toggle password visibility"></button>
                     </div>
                     <div class="password-strength">
@@ -71,22 +65,30 @@
                         <span class="strength-text">Password strength</span>
                     </div>
                 </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <div class="password-input">
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required minlength="8">
+                        <button type="button" class="password-toggle" aria-label="Toggle password visibility"></button>
+                    </div>
+                </div>
 
                 <div class="form-group">
                     <div class="checkbox-group">
                         <input type="checkbox" id="terms" name="terms" required>
-                        <label for="terms">I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a></label>
+                        <label for="terms">I agree to Sentry's <a href="terms.html" target="_blank">Terms of Service</a> and <a href="privacy.html" target="_blank">Privacy Policy</a>.</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="checkbox-group">
-                        <input type="checkbox" id="newsletter" name="newsletter">
-                        <label for="newsletter">Send me product updates and news (optional)</label>
+                        <input type="checkbox" id="newsletter" name="newsletter" checked>
+                        <label for="newsletter">Receive Sentry updates, news, and tips (you can unsubscribe anytime).</label>
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-full">Create account</button>
+                <button type="submit" class="btn btn-primary btn-full">Create Free Account</button>
 
                 <div class="auth-divider">
                     <span>or</span>
@@ -115,129 +117,7 @@
     </div>
 
     <!-- JavaScript Files -->
-    <script src="assets/js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Password visibility toggle
-            const passwordToggle = document.querySelector('.password-toggle');
-            const passwordInput = document.querySelector('#password');
-
-            passwordToggle.addEventListener('click', function() {
-                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-                passwordInput.setAttribute('type', type);
-                this.classList.toggle('visible');
-            });
-
-            // Password strength meter
-            const strengthMeter = document.querySelector('.strength-meter');
-            const strengthText = document.querySelector('.strength-text');
-            const strengthSegments = document.querySelectorAll('.strength-segment');
-
-            passwordInput.addEventListener('input', function() {
-                const password = this.value;
-                let strength = 0;
-
-                // Length check
-                if (password.length >= 8) {
-                    strength += 1;
-                }
-
-                // Contains uppercase
-                if (/[A-Z]/.test(password)) {
-                    strength += 1;
-                }
-
-                // Contains number
-                if (/[0-9]/.test(password)) {
-                    strength += 1;
-                }
-
-                // Contains special character
-                if (/[^A-Za-z0-9]/.test(password)) {
-                    strength += 1;
-                }
-
-                // Update strength meter
-                strengthSegments.forEach((segment, index) => {
-                    if (index < strength) {
-                        segment.classList.add('active');
-                    } else {
-                        segment.classList.remove('active');
-                    }
-                });
-
-                // Update strength text
-                if (password.length === 0) {
-                    strengthText.textContent = 'Password strength';
-                    strengthText.className = 'strength-text';
-                } else if (strength === 0 || strength === 1) {
-                    strengthText.textContent = 'Weak';
-                    strengthText.className = 'strength-text weak';
-                } else if (strength === 2) {
-                    strengthText.textContent = 'Fair';
-                    strengthText.className = 'strength-text fair';
-                } else if (strength === 3) {
-                    strengthText.textContent = 'Good';
-                    strengthText.className = 'strength-text good';
-                } else {
-                    strengthText.textContent = 'Strong';
-                    strengthText.className = 'strength-text strong';
-                }
-            });
-
-            // Form submission
-            const signupForm = document.getElementById('signup-form');
-
-            signupForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-
-                const firstName = document.getElementById('first-name').value;
-                const lastName = document.getElementById('last-name').value;
-                const email = document.getElementById('email').value;
-                const company = document.getElementById('company').value;
-                const password = document.getElementById('password').value;
-
-                const submitButton = this.querySelector('button[type="submit"]');
-                const originalText = submitButton.textContent;
-
-                // Show loading state
-                submitButton.innerHTML = '<span class="loading-spinner"></span> Creating account...';
-                submitButton.disabled = true;
-
-                // Simulate API call
-                setTimeout(() => {
-                    // For demo purposes, redirect to dashboard
-                    window.location.href = 'dashboard.html';
-
-                    // In case redirection fails, reset the button
-                    submitButton.innerHTML = originalText;
-                    submitButton.disabled = false;
-                }, 1500);
-            });
-
-            // Social auth buttons
-            const socialButtons = document.querySelectorAll('.btn-social');
-
-            socialButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const originalText = this.innerHTML;
-
-                    // Show loading state
-                    this.innerHTML = '<span class="loading-spinner"></span> Connecting...';
-                    this.disabled = true;
-
-                    // Simulate API call
-                    setTimeout(() => {
-                        // For demo purposes, redirect to dashboard
-                        window.location.href = 'dashboard.html';
-
-                        // In case redirection fails, reset the button
-                        this.innerHTML = originalText;
-                        this.disabled = false;
-                    }, 1500);
-                });
-            });
-        });
-    </script>
+    <script src="assets/js/main.js"></script> <!-- General site scripts -->
+    <script src="assets/js/auth.js"></script> <!-- Authentication specific scripts -->
 </body>
 </html>

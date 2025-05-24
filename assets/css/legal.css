@@ -1,0 +1,80 @@
+/* Styles for legal.html (terms, privacy, cookies) */
+
+.legal-page-main {
+    padding: 5rem 0; /* Consistent with section padding */
+    background-color: var(--white); /* Simpler background for legal pages */
+}
+
+.legal-content-section {
+    background-color: var(--white);
+    padding: 0; /* Remove extra padding if .container handles it */
+    border-radius: 0; /* No separate card look for the whole section */
+    box-shadow: none; /* No shadow for the whole section */
+    max-width: 800px; /* Optimal reading width for legal text */
+    margin: 0 auto;
+}
+
+.legal-page-title {
+    font-size: 4rem; /* Match h2 from styles.css */
+    color: var(--blue-charcoal);
+    margin-bottom: 1rem; /* Reduced margin */
+    text-align: left; /* Standard text alignment */
+    border-bottom: 1px solid var(--mid-gray); /* Subtle separator */
+    padding-bottom: 1.5rem;
+}
+
+.last-updated-date {
+    font-size: 1.4rem; /* Smaller text */
+    color: var(--mid-gray); /* Mid-gray for less emphasis */
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.legal-text-content h2 {
+    font-size: 2.8rem; /* Match h3 from styles.css */
+    color: var(--blue-charcoal);
+    margin-top: 3.5rem; /* More space above section headings */
+    margin-bottom: 1.5rem;
+    padding-bottom: 0;
+    border-bottom: none; /* Remove border if not needed */
+}
+
+.legal-text-content h3 { /* If used for sub-sub-sections */
+    font-size: 2.2rem; /* Match h4 from styles.css */
+    color: var(--blue-charcoal);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.legal-text-content p {
+    font-size: 1.6rem; /* Standard paragraph size */
+    line-height: 1.75; /* Increased for readability of dense text */
+    color: var(--dark-gray); /* Standard text color */
+    margin-bottom: 2rem; /* Consistent paragraph spacing */
+}
+
+.legal-text-content ul {
+    list-style: disc;
+    margin-left: 2.5rem; /* Standard indent for lists */
+    margin-bottom: 2rem;
+}
+
+.legal-text-content li {
+    margin-bottom: 1rem; /* Spacing between list items */
+    line-height: 1.75;
+    color: var(--dark-gray);
+}
+
+.legal-text-content a {
+    color: var(--royal-blue);
+    text-decoration: underline; /* Explicitly underline links in legal text */
+    font-weight: 500; /* Slightly bolder links */
+}
+
+.legal-text-content a:hover {
+    color: var(--cornflower-blue); /* Lighter blue on hover */
+    text-decoration: underline;
+}
+
+/* Ensure footer legal links are styled as per styles.css (usually light on dark bg) */
+/* No specific overrides needed here if footer styling is global and sufficient */

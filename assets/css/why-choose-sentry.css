@@ -1,0 +1,74 @@
+/* Styles for why-choose-sentry.html */
+
+/* Page Hero - usually covered by styles.css, but can add specifics if needed */
+.page-hero {
+    background-color: var(--light-gray); /* Example, adjust if different from global hero */
+    padding: 6rem 0; /* Consistent padding */
+    text-align: center;
+}
+
+.page-hero .page-title {
+    color: var(--blue-charcoal); /* Consistent with h1 styling */
+    margin-bottom: 1.6rem;
+}
+
+.page-hero .page-subtitle {
+    color: var(--dark-gray); /* Consistent with subtitles */
+    font-size: 2rem; /* Consistent subtitle size */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Benefits Section Styling */
+.benefits-section {
+    padding: 6rem 0; /* Consistent section padding */
+}
+
+.benefits-section .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 4rem; /* Spacing between benefit items */
+}
+
+.benefit-item {
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: var(--radius-lg); /* Use defined radius */
+    box-shadow: var(--shadow-md); /* Use defined shadow */
+    text-align: left; /* Align text to the left for readability */
+    display: flex;
+    flex-direction: column; /* Stack icon and content vertically */
+    align-items: flex-start; /* Align items to the start */
+}
+
+.benefit-icon {
+    margin-bottom: 2rem; /* Space below icon */
+    background-color: rgba(58, 85, 242, 0.1); /* Light blue background for icon container */
+    border-radius: 50%; /* Circular background */
+    padding: 1.5rem; /* Padding around icon */
+    display: inline-flex; /* To contain the icon properly */
+}
+
+.benefit-icon img {
+    width: 3.2rem; /* Icon size */
+    height: 3.2rem;
+}
+
+.benefit-title {
+    font-size: 2.4rem; /* Consistent h3 or h4 size */
+    color: var(--blue-charcoal);
+    margin-bottom: 1.2rem;
+}
+
+.benefit-description {
+    font-size: 1.6rem; /* Standard paragraph size */
+    color: var(--dark-gray);
+    line-height: 1.6;
+    margin-bottom: 0; /* Remove default p margin if it's the last element */
+}
+
+/* Ensure CTA section styling is consistent (likely covered by styles.css) */
+.cta {
+    /* Styles are usually global from styles.css */
+}

@@ -105,8 +105,13 @@ function initButtonLoadingStates() {
 
   buttons.forEach(button => {
     button.addEventListener('click', function(e) {
-      if (this.classList.contains('btn-primary') || this.classList.contains('btn-secondary')) {
+      if (this.classList.contains('btn-primary') || this.classList.contains('btn-secondary') || this.classList.contains('btn-outline')) {
         // Only for demo/prototype, prevent actual navigation
+        // Exclude auth form submit buttons as they have their own logic
+        if (this.closest('form.auth-form') || this.closest('form.contact-form-placeholder')) {
+            return;
+        }
+
         if (this.getAttribute('href') && !this.getAttribute('href').startsWith('#')) {
           e.preventDefault();
 

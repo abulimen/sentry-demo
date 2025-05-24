@@ -1,0 +1,147 @@
+/* Styles for tutorials.html */
+
+/* Page Hero - specific styling for tutorials if needed */
+.tutorials-hero { /* Use if different from default .page-hero */
+    background-color: var(--cornflower-blue); /* Example: A different background */
+    color: var(--white);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.tutorials-hero .page-title {
+    color: var(--white);
+}
+
+.tutorials-hero .page-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tutorials Listing Section */
+.tutorials-listing-section {
+    padding: 6rem 0;
+}
+
+.tutorial-topic {
+    margin-bottom: 5rem;
+}
+
+.tutorial-topic:last-child {
+    margin-bottom: 0;
+}
+
+.topic-title { /* Styling for topic titles like "Getting Started with Sentry" */
+    font-size: 2.8rem; /* h3 size or slightly larger */
+    color: var(--blue-charcoal);
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--royal-blue); /* Main theme accent */
+    text-align: left; /* Or center if preferred */
+}
+
+.tutorials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive grid */
+    gap: 3rem;
+}
+
+.tutorial-card {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* To ensure thumbnail respects border-radius */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tutorial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.tutorial-thumbnail-link {
+    display: block;
+    position: relative;
+    background-color: var(--blue-charcoal); /* Fallback bg for thumbnail */
+}
+
+.tutorial-thumbnail {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 225px; /* Consistent height */
+    object-fit: cover;
+    display: block;
+}
+
+.play-icon,
+.interactive-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem; /* Large icon */
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    pointer-events: none; /* So it doesn't interfere with the link */
+}
+
+.tutorial-thumbnail-link:hover .play-icon,
+.tutorial-thumbnail-link:hover .interactive-icon {
+    background-color: rgba(58, 85, 242, 0.7); /* Royal blue with transparency */
+}
+
+
+.tutorial-card .tutorial-title { /* Added to scope title within card */
+    font-size: 2rem; /* h5 size */
+    color: var(--blue-charcoal);
+    margin: 1.5rem 1.5rem 0.8rem; /* Adjusted padding */
+}
+
+.tutorial-card .tutorial-title a {
+    text-decoration: none;
+    color: inherit;
+}
+.tutorial-card .tutorial-title a:hover {
+    color: var(--royal-blue);
+}
+
+
+.tutorial-description {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    padding: 0 1.5rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.tutorial-meta {
+    font-size: 1.3rem;
+    color: var(--mid-gray);
+    padding: 0 1.5rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.tutorial-card .btn-secondary.btn-small {
+    padding: 0.8rem 1.6rem;
+    font-size: 1.4rem;
+    margin: 0 1.5rem 1.5rem; /* Consistent padding for button */
+    align-self: flex-start;
+}
+
+
+/* CTA section styling is likely global from styles.css */
+.cta {
+    /* Styles are usually global */
+}

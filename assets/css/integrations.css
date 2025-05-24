@@ -1,0 +1,207 @@
+/* Styles for integrations.html */
+
+/* Page Hero - specific styling for integrations page */
+.integrations-hero { /* Different from default .page-hero */
+    background: linear-gradient(135deg, var(--cornflower-blue) 0%, var(--royal-blue) 100%);
+    color: var(--white);
+    padding: 7rem 0;
+    text-align: center; /* Center align hero content */
+}
+
+.integrations-hero .page-hero-content {
+    max-width: 750px; /* Control width of text content */
+    margin: 0 auto 3rem auto; /* Center content and add margin below */
+}
+
+.integrations-hero .page-title {
+    color: var(--white);
+    font-size: 4.8rem; /* Prominent title */
+}
+
+.integrations-hero .page-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.integrations-hero .btn-primary {
+    background-color: var(--white);
+    color: var(--royal-blue);
+    font-weight: 600;
+}
+.integrations-hero .btn-primary:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.hero-image-integrations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem; /* Space above image if it's below text on mobile */
+}
+
+.hero-image-integrations img {
+    max-width: 450px; /* Control size of hero image */
+    width: 100%;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Integrations Listing Section */
+.integrations-listing-section {
+    padding: 6rem 0;
+}
+
+.section-title-center, .section-subtitle-center { /* Ensure these are globally available or define here */
+    text-align: center;
+    color: var(--blue-charcoal);
+    margin-left: auto;
+    margin-right: auto;
+}
+.section-title-center {
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+}
+.section-subtitle-center {
+    font-size: 1.8rem;
+    color: var(--dark-gray);
+    margin-bottom: 5rem;
+    max-width: 700px;
+}
+
+
+.integration-category {
+    margin-bottom: 4.5rem;
+}
+
+.category-title-integrations {
+    font-size: 2.4rem; /* h4 size */
+    color: var(--blue-charcoal);
+    margin-bottom: 2.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--mid-gray);
+}
+
+.integrations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.integration-card {
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid var(--light-gray); /* Subtle border */
+}
+
+.integration-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.integration-logo {
+    max-height: 40px; /* Standard logo height */
+    width: auto;
+    margin-bottom: 1.5rem;
+}
+
+.integration-name {
+    font-size: 1.8rem; /* h6 size */
+    color: var(--blue-charcoal);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.integration-description {
+    font-size: 1.4rem;
+    color: var(--dark-gray);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.integration-card .btn-outline.btn-small {
+    padding: 0.6rem 1.4rem;
+    font-size: 1.3rem;
+    margin-top: auto; /* Pushes button to bottom */
+}
+.integration-card .btn-outline.disabled {
+    border-color: var(--mid-gray);
+    color: var(--mid-gray);
+    cursor: not-allowed;
+}
+.integration-card .btn-outline.disabled:hover {
+    background-color: transparent;
+    color: var(--mid-gray);
+}
+
+
+/* Build Your Own Integration Section */
+.build-integration-section {
+    padding: 6rem 0;
+    background-color: var(--light-gray);
+    text-align: center;
+}
+
+.build-integration-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 2rem auto;
+    display: block;
+}
+
+
+/* Integration Partner Section */
+.integration-partner-section {
+    padding: 6rem 0;
+}
+
+.partner-content-box { /* Reusable from pricing.css or define here */
+    background-color: var(--blue-charcoal);
+    color: var(--white);
+    padding: 4rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-md);
+}
+
+.partner-content-box .cta-title-medium {
+    font-size: 2.8rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.partner-content-box .cta-text-medium {
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.partner-content-box .btn-outline {
+    border-color: var(--white);
+    color: var(--white);
+}
+.partner-content-box .btn-outline:hover {
+    background-color: var(--white);
+    color: var(--blue-charcoal);
+}
+
+
+@media screen and (max-width: 768px) {
+    .integrations-hero .page-hero-content {
+        padding: 0 1rem; /* Add padding on smaller screens */
+    }
+    .hero-image-integrations img {
+        max-width: 350px;
+    }
+}

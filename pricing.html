@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing - Sentry Payment Platform</title>
-    <meta name="description" content="Explore Sentry's transparent pricing for Pi Network payments and blockchain-verified reviews">
+    <title>Pricing Plans | Sentry Payments</title>
+    <meta name="description" content="Explore Sentry's flexible pricing plans designed for businesses of all sizes. Choose the best fit for your Pi Network payment and review needs.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -88,293 +88,115 @@
 
     <main>
         <!-- Pricing Hero Section -->
-        <section class="hero pricing-hero">
+        <section class="page-hero">
             <div class="container">
-                <div class="hero-content text-center">
-                    <h1 class="hero-title">Simple, transparent pricing</h1>
-                    <p class="hero-subtitle">Start with our free plan. Scale to the plan that best fits your business needs.</p>
-                    <div class="pricing-toggle">
-                        <span class="toggle-label">Monthly</span>
-                        <label class="switch">
-                            <input type="checkbox" id="billingToggle">
-                            <span class="slider round"></span>
-                        </label>
-                        <span class="toggle-label">Annual <span class="save-badge">Save 20%</span></span>
-                    </div>
+                <div class="page-hero-content">
+                    <h1 class="page-title">Simple, Transparent Pricing</h1>
+                    <p class="page-subtitle">Choose the Sentry plan that scales with your business. No hidden fees, just clear value for integrating Pi Network solutions.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Pricing Plans Section -->
-        <section class="pricing-plans">
+        <!-- Pricing Table Section -->
+        <section class="pricing-table-section">
             <div class="container">
-                <div class="plans-container">
-                    <!-- Starter Plan -->
-                    <div class="pricing-plan">
-                        <div class="plan-header">
-                            <h3 class="plan-name">Starter</h3>
-                            <div class="plan-price">
-                                <span class="price monthly">$0</span>
-                                <span class="price annual" style="display: none;">$0</span>
-                                <span class="billing-period">/month</span>
-                            </div>
-                            <p class="plan-description">Perfect for new businesses getting started with Pi payments</p>
+                <div class="pricing-grid">
+                    <!-- Pioneer Plan -->
+                    <div class="pricing-card">
+                        <div class="pricing-card-header">
+                            <h2 class="plan-name">Pioneer</h2>
+                            <p class="plan-price">Free</p>
+                            <p class="plan-description">Perfect for individuals, developers, and startups looking to explore Pi Network capabilities and integrate basic payment solutions.</p>
                         </div>
-                        <div class="plan-features">
-                            <ul class="check-list">
-                                <li>Accept Pi Network payments</li>
-                                <li>Basic review verification</li>
-                                <li>Up to 100 transactions per month</li>
-                                <li>2.9% + π0.30 per transaction</li>
-                                <li>Standard customer support</li>
-                            </ul>
-                        </div>
-                        <div class="plan-action">
-                            <a href="signup.html" class="btn btn-outline btn-full">Get started</a>
-                        </div>
+                        <ul class="plan-features">
+                            <li><span class="feature-icon">✓</span>Pi Payment Gateway Access</li>
+                            <li><span class="feature-icon">✓</span>Blockchain Review Verifier (up to 100 reviews/month)</li>
+                            <li><span class="feature-icon">✓</span>Basic Analytics Dashboard</li>
+                            <li><span class="feature-icon">✓</span>Standard API Access (500 calls/month)</li>
+                            <li><span class="feature-icon">✓</span>Community Forum Support</li>
+                            <li><span class="feature-icon"></span>Transaction Fee: 2.0% + 0.05 Pi</li>
+                        </ul>
+                        <a href="signup.html?plan=pioneer" class="btn btn-primary btn-full">Get Started Free</a>
                     </div>
 
-                    <!-- Growth Plan -->
-                    <div class="pricing-plan featured">
-                        <div class="plan-badge">Popular</div>
-                        <div class="plan-header">
-                            <h3 class="plan-name">Growth</h3>
-                            <div class="plan-price">
-                                <span class="price monthly">$49</span>
-                                <span class="price annual" style="display: none;">$39</span>
-                                <span class="billing-period">/month</span>
-                            </div>
-                            <p class="plan-description">For growing businesses processing more payments</p>
+                    <!-- Voyager Plan -->
+                    <div class="pricing-card featured">
+                        <div class="pricing-card-header">
+                            <span class="featured-badge">Most Popular</span>
+                            <h2 class="plan-name">Voyager</h2>
+                            <p class="plan-price">100 Pi / month</p>
+                            <p class="plan-description">Ideal for growing businesses and active Pi applications requiring more features, higher limits, and dedicated support.</p>
                         </div>
-                        <div class="plan-features">
-                            <ul class="check-list">
-                                <li>All Starter features</li>
-                                <li>Advanced review verification</li>
-                                <li>Up to 1,000 transactions per month</li>
-                                <li>1.9% + π0.25 per transaction</li>
-                                <li>Priority customer support</li>
-                                <li>Advanced analytics dashboard</li>
-                                <li>Review widget for your website</li>
-                            </ul>
-                        </div>
-                        <div class="plan-action">
-                            <a href="signup.html" class="btn btn-primary btn-full">Get started</a>
-                        </div>
-                    </div>
-
-                    <!-- Scale Plan -->
-                    <div class="pricing-plan">
-                        <div class="plan-header">
-                            <h3 class="plan-name">Scale</h3>
-                            <div class="plan-price">
-                                <span class="price monthly">$199</span>
-                                <span class="price annual" style="display: none;">$159</span>
-                                <span class="billing-period">/month</span>
-                            </div>
-                            <p class="plan-description">For established businesses with high volume</p>
-                        </div>
-                        <div class="plan-features">
-                            <ul class="check-list">
-                                <li>All Growth features</li>
-                                <li>Enterprise-grade review verification</li>
-                                <li>Up to 10,000 transactions per month</li>
-                                <li>0.9% + π0.20 per transaction</li>
-                                <li>24/7 priority support</li>
-                                <li>Advanced fraud protection</li>
-                                <li>Dedicated account manager</li>
-                                <li>Custom review verification flows</li>
-                            </ul>
-                        </div>
-                        <div class="plan-action">
-                            <a href="signup.html" class="btn btn-outline btn-full">Get started</a>
-                        </div>
+                        <ul class="plan-features">
+                            <li><span class="feature-icon">✓</span>All Pioneer features, plus:</li>
+                            <li><span class="feature-icon">✓</span>Unlimited Blockchain Reviews</li>
+                            <li><span class="feature-icon">✓</span>Advanced Analytics & Reporting Suite</li>
+                            <li><span class="feature-icon">✓</span>Enhanced API Access (5,000 calls/month)</li>
+                            <li><span class="feature-icon">✓</span>Direct Email & Chat Support</li>
+                            <li><span class="feature-icon">✓</span>Early access to new features</li>
+                            <li><span class="feature-icon"></span>Transaction Fee: 1.5% + 0.02 Pi</li>
+                        </ul>
+                        <a href="signup.html?plan=voyager" class="btn btn-primary btn-full">Choose Voyager Plan</a>
                     </div>
 
                     <!-- Enterprise Plan -->
-                    <div class="pricing-plan">
-                        <div class="plan-header">
-                            <h3 class="plan-name">Enterprise</h3>
-                            <div class="plan-price">
-                                <span class="price">Custom</span>
-                            </div>
-                            <p class="plan-description">For large businesses with custom requirements</p>
+                    <div class="pricing-card">
+                        <div class="pricing-card-header">
+                            <h2 class="plan-name">Enterprise</h2>
+                            <p class="plan-price">Custom</p>
+                            <p class="plan-description">Tailored solutions for large-scale operations, marketplaces, or businesses with unique requirements and high transaction volumes.</p>
                         </div>
-                        <div class="plan-features">
-                            <ul class="check-list">
-                                <li>All Scale features</li>
-                                <li>Unlimited transactions</li>
-                                <li>Custom transaction fees</li>
-                                <li>Custom integration support</li>
-                                <li>24/7 premium support</li>
-                                <li>Dedicated account & success team</li>
-                                <li>Custom contracts and terms</li>
-                                <li>Enterprise SLA</li>
-                            </ul>
-                        </div>
-                        <div class="plan-action">
-                            <a href="contact.html" class="btn btn-outline btn-full">Contact sales</a>
-                        </div>
+                        <ul class="plan-features">
+                            <li><span class="feature-icon">✓</span>All Voyager features, plus:</li>
+                            <li><span class="feature-icon">✓</span>Custom Volume-Based Transaction Rates</li>
+                            <li><span class="feature-icon">✓</span>Unlimited API Calls & Higher Rate Limits</li>
+                            <li><span class="feature-icon">✓</span>Dedicated Account Manager & Technical Support</li>
+                            <li><span class="feature-icon">✓</span>Premium Service Level Agreements (SLAs)</li>
+                            <li><span class="feature-icon">✓</span>Bespoke Integrations & Custom Feature Development</li>
+                            <li><span class="feature-icon">✓</span>Onboarding & Training Assistance</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline btn-full">Contact Sales</a>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Comparison Table Section -->
-        <section class="comparison">
-            <div class="container">
-                <h2 class="section-title">Compare Features</h2>
-
-                <div class="comparison-table-container">
-                    <table class="comparison-table">
-                        <thead>
-                            <tr>
-                                <th>Feature</th>
-                                <th>Starter</th>
-                                <th>Growth</th>
-                                <th>Scale</th>
-                                <th>Enterprise</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Pi Network Payments</td>
-                                <td><span class="check"></span></td>
-                                <td><span class="check"></span></td>
-                                <td><span class="check"></span></td>
-                                <td><span class="check"></span></td>
-                            </tr>
-                            <tr>
-                                <td>Transaction Fee</td>
-                                <td>2.9% + π0.30</td>
-                                <td>1.9% + π0.25</td>
-                                <td>0.9% + π0.20</td>
-                                <td>Custom</td>
-                            </tr>
-                            <tr>
-                                <td>Monthly Transactions</td>
-                                <td>100</td>
-                                <td>1,000</td>
-                                <td>10,000</td>
-                                <td>Unlimited</td>
-                            </tr>
-                            <tr>
-                                <td>Review Verification</td>
-                                <td>Basic</td>
-                                <td>Advanced</td>
-                                <td>Enterprise</td>
-                                <td>Custom</td>
-                            </tr>
-                            <tr>
-                                <td>Review Widget</td>
-                                <td><span class="minus"></span></td>
-                                <td><span class="check"></span></td>
-                                <td><span class="check"></span></td>
-                                <td><span class="check"></span></td>
-                            </tr>
-                            <tr>
-                                <td>Analytics Dashboard</td>
-                                <td>Basic</td>
-                                <td>Advanced</td>
-                                <td>Advanced</td>
-                                <td>Custom</td>
-                            </tr>
-                            <tr>
-                                <td>Fraud Protection</td>
-                                <td>Basic</td>
-                                <td>Standard</td>
-                                <td>Advanced</td>
-                                <td>Enterprise</td>
-                            </tr>
-                            <tr>
-                                <td>API Access</td>
-                                <td><span class="check"></span></td>
-                                <td><span class="check"></span></td>
-                                <td><span class="check"></span></td>
-                                <td><span class="check"></span></td>
-                            </tr>
-                            <tr>
-                                <td>Customer Support</td>
-                                <td>Email</td>
-                                <td>Priority Email</td>
-                                <td>24/7 Support</td>
-                                <td>Dedicated Team</td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
         </section>
 
         <!-- FAQ Section -->
-        <section class="faq">
+        <section class="faq-section">
             <div class="container">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-
-                <div class="faq-container">
+                <h2 class="section-title-center">Frequently Asked Questions</h2>
+                <div class="faq-grid">
                     <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>How do transaction fees work?</h3>
-                            <span class="faq-toggle"></span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Transaction fees are charged as a percentage of the total transaction amount plus a fixed fee. For example, with the Starter plan, a π100 transaction would incur a fee of π3.20 (2.9% of π100 + π0.30). Fees are only charged on successful transactions.</p>
-                        </div>
+                        <h3 class="faq-question">Are there any setup fees or hidden charges?</h3>
+                        <p class="faq-answer">No, Sentry believes in transparency. There are no setup fees for any of our plans. The pricing is as listed: a monthly fee for the Voyager plan (paid in Pi) and transaction fees. The Pioneer plan is free to start, with only transaction fees applicable.</p>
                     </div>
-
                     <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Can I upgrade or downgrade my plan?</h3>
-                            <span class="faq-toggle"></span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Yes, you can upgrade or downgrade your plan at any time. If you upgrade, you'll be charged the prorated difference for the remainder of your billing cycle. If you downgrade, the new rate will take effect at the beginning of your next billing cycle.</p>
-                        </div>
+                        <h3 class="faq-question">Can I upgrade or downgrade my plan at any time?</h3>
+                        <p class="faq-answer">Yes, absolutely. You can easily change your Sentry plan (e.g., from Pioneer to Voyager or vice-versa) directly from your account dashboard as your business needs evolve. Prorated charges or credits will be applied where applicable.</p>
                     </div>
-
                     <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>What happens if I exceed my monthly transaction limit?</h3>
-                            <span class="faq-toggle"></span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>If you exceed your monthly transaction limit, you'll be charged a small overage fee per additional transaction. We'll send you notifications when you reach 80% and 100% of your limit. You can also upgrade to a higher plan at any time to avoid overage fees.</p>
-                        </div>
+                        <h3 class="faq-question">How are the monthly subscription fees and transaction fees paid?</h3>
+                        <p class="faq-answer">All Sentry subscription fees (for the Voyager plan) and transaction fees are settled in Pi. We aim to make the entire process seamless within the Pi Network ecosystem.</p>
                     </div>
-
                     <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>What's the difference between basic and advanced review verification?</h3>
-                            <span class="faq-toggle"></span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Basic review verification confirms that the reviewer is a real customer who made a purchase. Advanced verification provides additional security by cryptographically signing reviews and storing them on the blockchain with a verification badge that can be displayed on your website. It also includes review analytics and fraud detection.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Do you offer refunds?</h3>
-                            <span class="faq-toggle"></span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>We offer a 30-day money-back guarantee for all paid plans. If you're not satisfied with our service within the first 30 days, contact our support team for a full refund. After 30 days, we do not offer prorated refunds for canceled subscriptions.</p>
-                        </div>
+                        <h3 class="faq-question">Do you offer discounts for high-volume transactions or non-profits?</h3>
+                        <p class="faq-answer">For businesses with very high transaction volumes, our Enterprise plan offers custom volume-based rates. We are also open to discussing special considerations for registered non-profit organizations contributing to the Pi ecosystem. Please <a href="contact.html">contact our sales team</a> to discuss your specific case.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- CTA Section -->
-        <section class="cta">
+        
+        <!-- Call to Action for Custom Needs -->
+        <section class="custom-solution-cta">
             <div class="container">
-                <h2 class="cta-title">Ready to get started with Sentry?</h2>
-                <p class="cta-subtitle">Join thousands of businesses already using Sentry to accept Pi payments and build trust with verified reviews.</p>
-                <div class="cta-buttons">
-                    <a href="signup.html" class="btn btn-primary">Create free account</a>
-                    <a href="contact.html" class="btn btn-outline">Contact sales</a>
+                <div class="cta-content-box">
+                    <h2 class="cta-title-medium">Need a Custom Solution or Have More Questions?</h2>
+                    <p class="cta-text-medium">If your business has unique requirements not covered by our standard plans, or if you have further questions about our pricing, our team is ready to help you find the perfect fit.</p>
+                    <a href="contact.html" class="btn btn-primary">Talk to Our Experts</a>
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- Footer -->
@@ -436,57 +258,5 @@
     <!-- JavaScript Files -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/animations.js"></script>
-
-    <!-- Add Pricing Toggle Functionality -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize FAQ accordion
-            initFaqAccordion();
-
-            // Initialize pricing toggle
-            initPricingToggle();
-        });
-
-        function initFaqAccordion() {
-            const faqItems = document.querySelectorAll('.faq-item');
-
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-
-                question.addEventListener('click', function() {
-                    // Toggle active class on the clicked item
-                    item.classList.toggle('active');
-
-                    // Get answer element
-                    const answer = item.querySelector('.faq-answer');
-
-                    // Toggle height
-                    if (item.classList.contains('active')) {
-                        answer.style.maxHeight = answer.scrollHeight + 'px';
-                    } else {
-                        answer.style.maxHeight = '0';
-                    }
-                });
-            });
-        }
-
-        function initPricingToggle() {
-            const toggle = document.getElementById('billingToggle');
-            const monthlyPrices = document.querySelectorAll('.price.monthly');
-            const annualPrices = document.querySelectorAll('.price.annual');
-
-            toggle.addEventListener('change', function() {
-                if (this.checked) {
-                    // Annual billing
-                    monthlyPrices.forEach(price => price.style.display = 'none');
-                    annualPrices.forEach(price => price.style.display = 'inline');
-                } else {
-                    // Monthly billing
-                    monthlyPrices.forEach(price => price.style.display = 'inline');
-                    annualPrices.forEach(price => price.style.display = 'none');
-                }
-            });
-        }
-    </script>
 </body>
 </html>
